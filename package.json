@@ -1,0 +1,45 @@
+{
+  "name": "test-gulp-babel",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.3.5",
+    "browser-sync": "~2.11.*",
+    "del": "^2.2.0",
+    "event-stream": "~3.3.*",
+    "file-exists": "^1.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-compass": "~2.1.*",
+    "gulp-concat": "~2.6.*",
+    "gulp-connect": "~3.2.*",
+    "gulp-copy": "~0.*",
+    "gulp-csslint": "~0.2.*",
+    "gulp-cssmin": "~0.1.*",
+    "gulp-debug": "^2.1.2",
+    "gulp-ftp": "~1.1.*",
+    "gulp-imagemin": "~2.4.*",
+    "gulp-jade": "~1.1.*",
+    "gulp-jshint": "~2.0.*",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-processhtml": "~1.1.*",
+    "gulp-rename": "~1.2.*",
+    "gulp-rimraf": "~0.2.*",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "~1.5.*",
+    "imagemin-pngquant": "~4.2.*",
+    "jshint": "~2.9.*",
+    "jshint-stylish": "~2.1.*",
+    "lodash": "~3.*",
+    "stream-combiner2": "^1.1.1"
+  },
+  "scripts": {
+    "start": "npm install && bower install && gulp"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

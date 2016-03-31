@@ -1,0 +1,18 @@
+////
+//// Logo
+//// --------------------------------------------------
+//
+//.logo {
+//  @include sprite-dimensions($icons, logo);
+//  background: $icons;
+//  background-position: sprite-position($icons, logo);
+//  @include retina-sprite-background(logo, $retina);
+//  display: block;
+//  margin: 0;
+//  overflow: hidden;
+//  text-indent: -9999px;
+//  a {
+//    display: block;
+//    height: 100%;
+//  }
+//}

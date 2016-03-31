@@ -1,0 +1,41 @@
+{
+  "name": "tests",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.*",
+    "jquery-placeholder": "~2.*",
+    "retina.js": "~1.*"
+  },
+  "files": {
+    "retina.js": {
+      "js": {
+        "cwd": "dist/",
+        "paths": ["retina.js"]
+      }
+    },
+    "jquery-placeholder": {
+      "js": {
+        "cwd": "",
+        "paths": ["jquery.placeholder.js"]
+      }
+    },
+    "fancybox": {
+      "js": {
+        "cwd": "source/",
+        "paths": ["{,helpers/}*.js", "!jquery.fancybox.pack.js"]
+      },
+      "css": {
+        "cwd": "source/",
+        "paths": ["{,helpers/}*.css"],
+        "dest": "css/fancybox/"
+      },
+      "images": {
+        "cwd": "source/",
+        "paths": ["{,helpers/}*.{gif,png}"],
+        "dest": "css/fancybox/"
+      },
+      "other": []
+    }
+  },
+  "devDependencies": {}
+}
