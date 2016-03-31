@@ -2,21 +2,21 @@
 //// Icons
 //// --------------------------------------------------
 //
-//$icons: sprite-map('icons/*.png', $layout: vertical, $spacing: 10px);
-//$retina: sprite-map('icons2x/*.png', $layout: vertical, $spacing: 4px);
+//$ico-second: sprite-map('ico-second/*.png', $layout: vertical, $spacing: 10px);
+//$retina: sprite-map('ico-first/*.png', $layout: vertical, $spacing: 4px);
 //
 //// Base icon styles
 //// --------------------------------------------------
 //
 //[class^="ico"] {
-//  background: $icons;
+//  background: $ico-second;
 //  display: inline-block;
 //  vertical-align: middle;
 //}
-//@each $i in sprite_names($icons) {
+//@each $i in sprite_names($ico-second) {
 //  .ico-#{$i} {
-//    @include sprite-dimensions($icons, $i);
-//    background-position: sprite-position($icons, $i);
+//    @include sprite-dimensions($ico-second, $i);
+//    background-position: sprite-position($ico-second, $i);
 //
 //    @include retina-sprite-background($i, $retina);
 //  }
