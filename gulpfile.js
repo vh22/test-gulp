@@ -8,7 +8,7 @@ var autoprefixer = require('autoprefixer');
 function lazyRequireTask(taskName, path, options) {
     options = options || {};
     options.taskName = taskName;
-    gulp.task(taskName, function(callback) {
+    gulp.task(taskName, function (callback) {
         var task = require(path).call(this, options);
 
         return task(callback);
@@ -17,31 +17,51 @@ function lazyRequireTask(taskName, path, options) {
 
 
 //
-// tasks for templates
+// tasks for #templates
 //------------------------
-lazyRequireTask('templates:dev', './tasks/clean', {
-    src: paths.dev.jade.pathToFiles,
-    dest: paths.dev.folder
-    
+lazyRequireTask('templates:dev', './tasks/templates', {
+    options: {
+        pretty: true
+    }
 });
 
 //
-// tasks for styles
+// tasks for #styles
 //------------------------
+
+// tasks for development
 lazyRequireTask('clean:styles', './tasks/clean', {
     dest: paths.dev.css.pathToFolder
 });
 lazyRequireTask('styles:assembly', './tasks/styles-assembly', {
     processors: [autoprefixer({browsers: ['last 2 versions', 'ie 9']})]
 });
-// main styles task
 gulp.task('styles:dev', gulp.series(
     'clean:styles',
     gulp.parallel('styles:assembly')
 ));
+// task for build
+lazyRequireTask('styles:assembly:build', './tasks/styles-assembly', {
+    processors: [autoprefixer({browsers: ['last 2 versions', 'ie 9']})],
+    isProduction: true
+});
+gulp.task('styles:build', gulp.series(
+    'clean:styles',
+    gulp.parallel('styles:assembly:build')
+));
 
 //
-// tasks for images
+// tasks for #styles
+//------------------------
+lazyRequireTask('js:assembly', './tasks/js-assembly', {
+    src: paths.dev.js.pathToMainFiles,
+    settings: {
+        debug: true
+    }
+});
+
+//
+// tasks for #images
 //------------------------
 lazyRequireTask('img:sprite', './tasks/img-sprite', {
     src: paths.dev.images.pathToSpriteFolder,
@@ -58,7 +78,7 @@ lazyRequireTask('img:min', './tasks/img-min', {
 
 
 //
-// serve and watch task
+// #serve and #watch task
 //------------------------
 lazyRequireTask('serve', './tasks/serve', {
     src: paths.dev.folder,
@@ -69,13 +89,25 @@ lazyRequireTask('serve', './tasks/serve', {
 //
 // task packs
 //------------------------
-gulp.task('assembly', function() {
+gulp.task('assembly', function () {
     gulp.parallel('styles:dev');
 });
 
 //
-// default task
+// #watch
 //------------------------
-gulp.task('default', function() {
-    gulp.series('serve', gulp.parallel('assembly'));
+gulp.task('watch', function () {
+    gulp.watch(paths.dev.sass.pathToFiles, gulp.series('styles:dev'));
+    gulp.watch(paths.dev.jade.pathToFiles, gulp.series('template:dev'));
+    gulp.watch(paths.dev.js.pathToFiles, gulp.series('js:assembly'));
 });
+
+//
+// #build task
+//------------------------
+gulp.task('build', gulp.parallel('templates:dev', 'styles:dev', 'js:assembly'));
+
+//
+// #default task
+//------------------------
+gulp.task('default', gulp.series('build', 'serve', 'watch'));

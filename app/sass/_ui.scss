@@ -7,10 +7,8 @@
 
 // UI container
 .ui-container {
-  //@include transition(padding-left .3s);
   padding: 0 20px 0 88px;
   @media only screen and (min-width: $xl-breakpoint) {
-    //@include transition(none);
     padding-left: 260px;
   }
   // styles for shown sidebar
@@ -55,14 +53,13 @@
   margin-bottom: $padding-large-vertical;
   padding-top: $padding-large-vertical;
 }
+
 // Color palette block styles
 .ui-color-box {
-  //@include border-radius($border-radius-small);
   border: 1px solid $gray-lighter;
   margin: $padding-base-vertical;
   padding: $padding-base-vertical;
   text-align: center;
-  display: flex;
 }
 .ui-color-heading {
   display: block;
@@ -87,9 +84,6 @@
 
 // UI Sidebar
 .ui-sidebar {
-  //@include box-shadow(0 0 10px rgba($black, .5));
-  //@include transform(translateZ(0));
-  //@include transition(left .3s);
   background: $white;
   bottom: 0;
   left: -123px;
@@ -98,7 +92,6 @@
   top: 0;
   width: 151px;
   @media only screen and (min-width: $xl-breakpoint) {
-    //@include transition(none);
     left: 0;
     padding-top: 20px;
     width: 200px;
@@ -118,12 +111,10 @@
     top: 12px;
   }
   .frame {
-    //@include transition(margin-left .3s);
     margin-left: -50px;
     position: relative;
     height: 100%;
     @media only screen and (min-width: $xl-breakpoint) {
-      //@include transition(none);
       margin-left: 0;
     }
   }

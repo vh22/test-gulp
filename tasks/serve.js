@@ -1,7 +1,6 @@
 'use strict';
 
 var browserSync = require('browser-sync').create();
-var paths = require('../sliceart_modules/paths.js');
 
 module.exports = function(options) {
 

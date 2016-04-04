@@ -3,19 +3,19 @@
 var $ = require('gulp-load-plugins')();
 var paths = require('../sliceart_modules/paths.js');
 var gulp = require('gulp');
-var combine = require('stream-combiner2').obj;
 
-module.exports = function(options) {
+module.exports = function (options) {
 
-    return function() {
-        return combine(
-            gulp.src(options.src || paths.dev.sass.pathToFiles),
-            $.sourcemaps.init(),
-            $.sass(),
-            $.postcss(options.processors),
-            $.sourcemaps.write(),
-            gulp.dest(options.dest || paths.dev.css.pathToFolder)
-        ).on('sass error', $.notify.onError());
+    var isProduction = options.isProduction || false;
+
+    return function () {
+        return gulp.src(options.src || paths.dev.sass.pathToFiles)
+            .pipe($.if(!isProduction, $.sourcemaps.init()))
+            .pipe($.sass())
+            .pipe($.postcss(options.processors))
+            .pipe($.if(isProduction, $.csso()))
+            .pipe($.if(!isProduction, $.sourcemaps.write()))
+            .pipe(gulp.dest(options.dest || paths.dev.css.pathToFolder));
     };
 
 };

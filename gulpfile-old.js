@@ -293,7 +293,7 @@ var tasks = {
           .pipe(uglify())
           .pipe(rename(function (filePath) {
             return uglifyRename(filePath);
-          })).pipe(gulp.dest(paths.build.js.pathToFolder))]
+          })).pipe(gulp.dest(paths.build.js.pathToFolder))];
 
       return es.merge.apply(es, streams);
     }
