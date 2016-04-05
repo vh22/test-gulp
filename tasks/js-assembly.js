@@ -7,37 +7,49 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var assign = require('lodash.assign');
-var glob = require('glob');
+var glob = require('glob-all');
 var paths = require('../sliceart_modules/paths.js');
 
 module.exports = function (options) {
 
     var isProduction = options.isProduction || false,
         settings = options.settings || {},
-        opts = assign({}, watchify.args, settings);
+        opts = assign({}, watchify.args, settings),
+        bundleExtName = options.extname || '.bundle.js';
 
     return function (done) {
-        glob(options.src || paths.dev.js.pathToOurFiles, function (err, files) {
+        var excludedBundle = '!' + paths.dev.js.pathToFolder + '*' + bundleExtName;
+        glob([options.src || paths.dev.js.pathToOurFiles, excludedBundle], function (err, files) {
             if (err) {
                 done(err);
             }
 
             files.map(function (entry) {
-                var currentOpts = assign({}, opts, {entries: [entry]});
-                browserify(currentOpts)
-                    .bundle()
-                    .pipe(source(entry))
-                    .pipe($.rename({
-                        extname: '.bundle.js'
-                    }))
-                    .pipe(buffer())
-                    .pipe($.if(!isProduction, $.sourcemaps.init({loadMaps: true})))
-                    .pipe($.if(!isProduction, $.sourcemaps.write()))
-                    .pipe($.if(isProduction, $.uglify()))
-                    .pipe($.debug({title: 'after'}))
-                    .pipe($.if(!isProduction,
-                        gulp.dest(options.dest || './'),
-                        gulp.dest(options.dest || './')));
+                var currentOpts = assign({}, opts, {entries: [entry], plugin: [watchify]}),
+                    b = browserify(currentOpts);
+
+                function bundle(entry) {
+                    console.log(entry);
+                    return b.bundle()
+                        .pipe(source(entry))
+                        .pipe($.rename({
+                            extname: bundleExtName
+                        }))
+                        .pipe(buffer())
+                        .pipe($.if(!isProduction, $.sourcemaps.init({loadMaps: true})))
+                        .pipe($.if(!isProduction, $.sourcemaps.write()))
+                        .pipe($.if(isProduction, $.uglify()))
+                        .pipe($.if(!isProduction,
+                            gulp.dest(options.dest || './'),
+                            gulp.dest(options.dest || './')));
+                }
+                b.on('update', function () {
+                    return bundle(entry);
+                });
+                b.on('log', function () {
+                    return $.util.log;
+                });
+                return bundle(entry);
             });
             done();
         });

@@ -54,7 +54,6 @@ paths.dev.less.pathToFiles = paths.dev.less.pathToFolder + paths.dev.less.files;
 // js
 paths.dev.js.pathToFolder = paths.dev.folder + paths.dev.js.folder;
 paths.dev.js.pathToFiles = paths.dev.js.pathToFolder + paths.dev.js.files;
-paths.dev.js.pathToOurFiles = paths.dev.js.pathToFolder + paths.dev.js.ourFiles;
 
 paths.dev.js.pathToPlgFolder = paths.dev.js.pathToFolder + paths.dev.js.plgFolder;
 

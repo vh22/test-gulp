@@ -98,8 +98,7 @@ gulp.task('assembly', function () {
 //------------------------
 gulp.task('watch', function () {
     gulp.watch(paths.dev.sass.pathToFiles, gulp.series('styles:dev'));
-    gulp.watch(paths.dev.jade.pathToFiles, gulp.series('template:dev'));
-    gulp.watch(paths.dev.js.pathToFiles, gulp.series('js:assembly'));
+    gulp.watch(paths.dev.jade.pathToFiles, gulp.series('templates:dev'));
 });
 
 //
@@ -110,4 +109,4 @@ gulp.task('build', gulp.parallel('templates:dev', 'styles:dev', 'js:assembly'));
 //
 // #default task
 //------------------------
-gulp.task('default', gulp.series('build', 'serve', 'watch'));
+gulp.task('default', gulp.series('build', gulp.parallel('watch', 'serve')));
