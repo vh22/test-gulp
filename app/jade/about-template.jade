@@ -1,0 +1,32 @@
+extends _modules/layout
+block title
+  - title = "About template"
+block body
+  - isAboutUs = true
+  - isAboutUsPage = true
+  //wrapper starts
+  .wrapper(data-add-class-parent data-nav-toggle-parent)
+    include _organisms/header
+    main(data-shifted-elements).content.no-side-indents.with-big-bottom-indent
+      .container
+        header.content-header
+          ul.list.list-inline.list-delimited.breadcrumbs
+            li
+              a(href="index.html") Avi cranes
+            li
+              a(href="about-template.html")
+                span.is-lg-hidden about us
+                span.is-hidden.is-lg-inline-visible about us
+            li About Avi Cranes
+          h1 About Avi Cranes
+        span.separator.is-hidden.is-lg-visible
+        .two-column-layout
+          .content-main.full-width-md-xl
+            .grid-row
+              .grid-col-xs-12.grid-col-xl-7
+                h2.heading-with-big-bottom-indent.big.leading.mobile-centered AVI CRANES IS THE LARGEST LIFTING COMPANY IN ISRAEL
+                .lead.alternative-font
+                  p Avi Cranes is a private company and operated for over 40 years, which has acquired a great reputation as a professional, safe and a market leader in the swing and the amount of work in Israel. Our work is in providing primary county include crane rental services, rent and sale of lifting platforms, material handling and heavy transport, special projects, transferring plants. We provide services to most industrial companies in Israel, including public companies, government agencies, defense industries and private companies.
+                  p The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. Finer palates detect a trace of mango and pineapple and the balance between sweet and bitter. Beer connoisseurs appreciate the fine note of yeast and the mild but sparkling mix of aromas. It is a typical beer garden beer, which brings people together all over the world.
+        .page-illustrate(style="background-image: url('images/backgrounds/bg-about.png')")
+  include _organisms/footer

@@ -1,0 +1,75 @@
+extends _modules/layout
+block title
+  - title = "Contact us"
+block body
+  - isContactUs = true
+  - isContact = true
+  //wrapper starts
+  .wrapper(data-add-class-parent data-nav-toggle-parent)
+    include _organisms/header
+    main.content(data-shifted-elements)
+      .container
+        header.content-header
+          ul.list.list-inline.list-delimited.breadcrumbs
+            li
+              a(href="index.html") Avi cranes
+            li
+              a(href="about-template.html")
+                span.is-lg-hidden about us
+                span.is-hidden.is-lg-inline-visible about us
+            li contact us
+          h1 Contact Us
+        .grid-row.two-column-layout
+          span.separator.is-hidden.is-lg-visible
+          .grid-col-xs-12.grid-col-lg-7
+            .content-main
+              form(novalidate data-form-with-validation)
+                fieldset
+                  .form-group
+                    label(for="contact-us-1").big How Can We Help You?
+                    textarea(cols="30" rows="10" id="contact-us-1" placeholder="We need the platform to be strong, and this is very urgent!").form-element
+                  .grid-row.no-side-indents
+                    .grid-col-lg-6.grid-col-xs-12
+                      .form-group
+                        label(for="contact-us-2").required Name
+                        input(type="text" id="contact-us-2" placeholder="Eyal Levy" data-required-form-element).form-element
+                    .grid-col-lg-6.grid-col-xs-12
+                      .form-group
+                        label(for="contact-us-3") Company
+                        input(type="text" id="contact-us-3" placeholder="Solel Bone").form-element
+                  .form-group
+                    label(for="contact-us-4").required Phone / Email
+                    input(type="email" id="contact-us-4" placeholder="eyal@sololbone.co.il" data-required-form-element).form-element
+                  .form-group
+                    button(type="submit").btn.btn-primary.btn-lg Send
+          .grid-col-xs-12.grid-col-lg-5
+            .content-sidebar.full-width
+              .block-with-shadow
+                h2.h6.list-title.list-title-primary.list-title-extra-big MAIN OFFICE
+                ul.list.list-of-columns
+                  li 4 kATZENELSON sT. 58016
+                  li AZORPOB 14460
+                  li TEL. +972 3 557 2222
+                  li FAX +972 3 557 2222
+                h2.h6.list-title.list-title-primary.list-title-extra-big ACCESS PLATFORMS OFFICE
+                ul.list.list-of-columns
+                  li 8 hataasian sT. 75364 rishon lezion
+                  li TEL. +972 3 959 7777
+                  li FAX +972 3 956 3333
+                h2.h6.list-title.list-title-primary.list-title-extra-big NORTHERN OFFICE
+                ul.list.list-of-columns
+                  li 74 HATLUTSEY HATAASIA sT. HAIFA BAY
+                  li TEL. +972 4 840 4711
+                  li FAX +972 4 840 4712
+                h2.h6.list-title.list-title-primary.list-title-extra-big SOUTHERN OFFICE
+                ul.list.list-of-columns
+                  li 3/17 TOSERET HAARETZ sT. PARK OFIR, BEER SHEVA
+                  li TEL. +972 8 627 9079
+                  li FAX +972 8 627 4475
+                h2.h6.list-title.list-title-primary.list-title-extra-big MAINTENANCE AND ACQUISITIONS OFFICE
+                ul.list.list-of-columns
+                  li 8 hataasian sT. 75364 rishon lezion
+                  li TEL. +972 3 959 7777
+                  li FAX +972 3 956 3333
+
+  include _organisms/footer

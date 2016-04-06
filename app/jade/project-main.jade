@@ -1,0 +1,126 @@
+extends _modules/layout
+block title
+  - title = "Project main"
+block body
+  - isProject = true
+  //wrapper starts
+  .wrapper(data-add-class-parent data-nav-toggle-parent)
+    include _organisms/header
+    main(data-shifted-elements).content.no-side-indents
+      .container.container-narrow
+        header.content-header.text-center
+          ul.list.list-inline.list-delimited.breadcrumbs.is-centered
+            li
+              a(href="index.html") Avi cranes
+            li
+              a(href="project-main.html")
+                span.is-lg-hidden Projects
+                span.is-hidden.is-lg-inline-visible Projects
+            li all projects
+          h1 Our Selected Projects
+        span.separator
+        .content-main
+          .text-promo
+            p Crawler cranes have both advantages and disadvantages depending on their use. Their main advantage is that they can move around on site and perform each lift with little set-up, since the crane is stable on its tracks with no outriggers. Caterpillar tracks are also far better at traversing soft ground without sinking
+          nav.page-nav
+            ul.list.list-inline
+              li
+                a(href="#cranes" data-scroll-to) Cranes
+              li
+                a(href="#access-platforms" data-scroll-to) Access Platforms
+              li
+                a(href="#heavy-transport" data-scroll-to) Heavy Transport
+          #cranes.text-center
+            h2.heading-underlined.extra-big.media-title Cranes
+          .grid-row
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  span.btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content A JOB THIS BIG TAKES MORE THAN jUST LIFTING POWER
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content TWO LOCATIONS, HALF THE CONSTRUCTION TIME.
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content LIFTING BIG TO MAKE UP FOR LOST TIME.
+          #access-platforms.text-center
+            h2.heading-underlined.extra-big.media-title ACCESS PLATFORMS
+          .grid-row
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content A JOB THIS BIG TAKES MORE THAN jUST LIFTING POWER
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content TWO LOCATIONS, HALF THE CONSTRUCTION TIME.
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content LIFTING BIG TO MAKE UP FOR LOST TIME.
+          #heavy-transport.text-center
+            h2.heading-underlined.extra-big.media-title HEAVY TRANSPORT
+          .grid-row
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content A JOB THIS BIG TAKES MORE THAN jUST LIFTING POWER
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content TWO LOCATIONS, HALF THE CONSTRUCTION TIME.
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content LIFTING BIG TO MAKE UP FOR LOST TIME.
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content A JOB THIS BIG TAKES MORE THAN jUST LIFTING POWER
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content TWO LOCATIONS, HALF THE CONSTRUCTION TIME.
+            .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+              figure.media
+                a(href="project-page.html").media-hover
+                  .btn.btn-md.btn-alternative.btn-complementary READ MORE
+                img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                figcaption.media-info
+                  .media-info-content LIFTING BIG TO MAKE UP FOR LOST TIME.
+  include _organisms/footer

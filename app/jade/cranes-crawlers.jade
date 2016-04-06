@@ -1,0 +1,46 @@
+extends _modules/layout
+block title
+  - title = "Cranes crawlers"
+block body
+  - isCranesDivision = true
+  - isCranesCrawlers = true
+  //wrapper starts
+  .wrapper(data-add-class-parent data-nav-toggle-parent)
+    include _organisms/header
+    main.content(data-shifted-elements)
+      .container
+        header.content-header
+          ul.list.list-inline.list-delimited.breadcrumbs
+            li
+              a(href="index.html") Avi cranes
+            li
+              a(href="cranes-about.html")
+                span.is-lg-hidden cRANES DIVISION
+                span.is-hidden.is-lg-inline-visible cRANES DIVISION
+            li crawler CRANES
+          h1 Cranes Crawlers
+        .two-column-layout
+          .grid-col-xs-12.grid-col-lg-7.no-side-indents
+            span.separator.is-hidden.is-lg-visible.left
+            .content-main
+              p Crawler cranes have both advantages and disadvantages depending on their use. Their main advantage is that they can move around on site and perform each lift with little set-up, since the crane is stable on its tracks with no outriggers. Caterpillar tracks are also far better at traversing soft ground without sinking in, as they spread the weight out over a great area. Thus a crawler crane can move
+              h2.h4.list-title Crawler Cranes
+              ul.list.list-of-columns
+                li
+                  a(href="#") Valla 75 E
+                li
+                  a(href="#") Valla 180 E
+                li
+                  a(href="#") Ormig T33
+                li
+                  a(href="#") Grove model 24
+                li
+                  a(href="#") Kobelco RK 70
+                li
+                  a(href="#") Grove AP 308
+                li
+                  a(href="#") Krupp 12 GMT-I
+          .grid-col-xs-12.grid-col-lg-5
+            .content-sidebar.is-hidden.is-lg-inline-visible
+              include _molecules/info-box
+  include _organisms/footer

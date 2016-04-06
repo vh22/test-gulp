@@ -1,0 +1,43 @@
+extends _modules/layout
+block title
+  - title = "Access platforms about"
+block body
+  - isAccessPlatforms = true
+  - isAccessPlatformsAbout = true
+  //wrapper starts
+  .wrapper(data-add-class-parent data-nav-toggle-parent)
+    include _organisms/header
+    article.promo.promo-access-platforms
+      .promo-content
+        .promo-mobile-image
+          img(src="images/backgrounds/bg-promo.jpg" alt="image description").responsive-img.scalable-img.is-lg-hidden
+          h1.promo-heading.heading-complementary ACCESS PLATFORMS
+        p.lead An aerial work platform  elevating work platform or mobile elevating work platformis a mechanical device used to provide temporary access for people or equipment to inaccessible areas, usually at height. There are distinct types of mechanized access platforms and the individual types
+        .h4.heading-block
+          a(href="tel:+97239597700").heading-complementary.promo-sub-heading Customer Service  +972 3 9597700
+        a(href="access-platforms-buy-used.html").btn.btn-primary.btn-long.btn-with-shadow ORDER AN ACCESS PLATFORM
+    main(data-shifted-elements)
+      .text-center
+        h2.h3.heading-with-border Choose an Access Platform Type
+      ul.list.list-with-thumbnails.fixed-width.grid-row
+        li.grid-col-lg-3
+          a(href="access-platforms-scissors.html")
+            figure.thumbnail
+              img(src="images/content/img-thumbnail-4.jpg" alt="image description" width="120" height="120").responsive-img
+              figcaption.thumbnail-caption SCISSORS
+        li.grid-col-lg-3
+          a(href="access-platforms.html")
+            figure.thumbnail
+              img(src="images/content/img-thumbnail-5.jpg" alt="image description" width="120" height="120").responsive-img
+              figcaption.thumbnail-caption BOOM LIFTS
+        li.grid-col-lg-3
+          a(href="access-platforms-vertical.html")
+            figure.thumbnail
+              img(src="images/content/img-thumbnail-6.jpg" alt="image description" width="120" height="120").responsive-img
+              figcaption.thumbnail-caption VERTICAL
+        li.grid-col-lg-3
+          a(href="access-platforms-truck-mounted.html")
+            figure.thumbnail
+              img(src="images/content/img-thumbnail-7.jpg" alt="image description" width="120" height="120").responsive-img
+              figcaption.thumbnail-caption TRUCK MOUNTED
+  include _organisms/footer

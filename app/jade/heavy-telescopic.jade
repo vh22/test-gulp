@@ -1,0 +1,36 @@
+extends _modules/layout
+block title
+  - title = "Heavy telescopic"
+block body
+  - isHeavyTransport = true
+  - isHeavyTelescopic = true
+  //wrapper starts
+  .wrapper(data-add-class-parent data-nav-toggle-parent)
+    include _organisms/header
+    main.content(data-shifted-elements)
+      .container
+        header.content-header
+          ul.list.list-inline.list-delimited.breadcrumbs
+            li
+              a(href="index.html") Avi cranes
+            li
+              a(href="heavy-about.html")
+                span.is-lg-hidden heavy transport
+                span.is-hidden.is-lg-inline-visible heavy transport
+            li Telescopic Handlers
+          h1 Telescopic Handlers
+        .two-column-layout
+          .grid-col-xs-12.grid-col-lg-7.no-side-indents
+            span.separator.is-hidden.is-lg-visible.left
+            .content-main
+              p A telescopic handler, telehandler or teleporter is a machine widely used in agriculture and industry. It is similar in appearance and function to a forklift but is more a crane than forklift, with the increased versatility of a single telescopic boom that can extend forwards and upwards from the vehicle. On the end of the boom the operator can fit one of several attachments, such as a bucket, pallet forks, muck grab, or winch.
+              p In industry the most common attachment for a tele-handler is pallet forks and the most common application is to move loads to and from places unreachable for a conventional forklift. For example, telehandlers have the ability to remove palletised cargo from within a trailer and to place loads on rooftops and other high places. The latter application would otherwise require a crane, which is not always practical or time-efficient.
+              p The telehandler can also work with a crane jib along with lifting loads, that attachments that include on the market are dirt buckets, grain buckets, rotators, power booms. The agricultural range can also be fitted with three point linkage and power take-off. This make the telehandler a truly universal piece of equipment.
+              a(href="#").btn.btn-primary.btn-sm TECHNICAL DATA
+          .grid-col-xs-12.grid-col-lg-5
+            .content-sidebar.is-hidden.is-lg-inline-visible
+              figure.info-box
+                img(src="images/content/img-box-info-1.jpg" width="428" height="618" alt="image description").responsive-img.scalable-img
+                figcaption.info-box-caption
+                  a(href="heavy-order.html").btn.btn-primary ORDER A TELESCOPIC HANDLER
+  include _organisms/footer

@@ -1,0 +1,112 @@
+extends _modules/layout
+block title
+  - title = "Cranes order"
+block body
+  - isCranesDivision = true
+  - isCranesOrder = true
+  //wrapper starts
+  .wrapper(data-add-class-parent data-nav-toggle-parent)
+    include _organisms/header
+    main.content(data-shifted-elements)
+      .container
+        header.content-header
+          ul.list.list-inline.list-delimited.breadcrumbs
+            li
+              a(href="index.html") Avi cranes
+            li
+              a(href="cranes-about.html")
+                span.is-lg-hidden cranes division
+                span.is-hidden.is-lg-inline-visible cranes division
+            li BYT YSED CRANE
+          h1 Order a Crane
+        span.separator.is-hidden.is-lg-visible
+        .grid-col-xs-12.grid-col-xl-5.no-side-indents
+          .content-main
+            ul(data-tab-container).list.tabs-nav
+              li.tab
+                span(data-tab-link="#tab1") Rent
+              li.tab.tab-is-active
+                span(data-tab-link="#tab2") Buy
+            section.tabs-content
+              h2.accessibility Tabs content
+              article(id="tab1").tab-pane
+                h3.accessibility tab 1 title
+                form(novalidate data-form-with-validation)
+                  fieldset
+                    .grid-row.no-bottom-indent
+                      .grid-col-xs-12.grid-col-md-8
+                        .form-group
+                          label.required(for="form-element-2") object working height
+                          .select-holder.form-element
+                            select(id="form-element-2")
+                              option UP TO 10 TON
+                              option UP TO 60 TON
+                              option UP TO 90 TON
+                      .grid-col-xs-12
+                    .form-group
+                      label(for="contact-us-1") information we should know
+                      textarea(cols="30" rows="10" id="contact-us-1" placeholder="We need the platform to be strong, and this is very urgent!").form-element.small-textarea
+                    .grid-row.no-bottom-indent
+                      .grid-col-xs-12.grid-col-lg-6
+                        .form-group
+                          label(for="order-1").required Name
+                          input(type="text" id="order-1" placeholder="Eyal Levy" data-required-form-element).form-element
+                      .grid-col-xs-12.grid-col-lg-6
+                        .form-group
+                          label(for="order-2") Company
+                          input(type="text" id="order-2" placeholder="Solel Bone").form-element
+                    .form-group
+                      label(for="contact-us-4").required Phone / Email
+                      input(type="email" id="contact-us-4" placeholder="eyal@sololbone.co.il" data-required-form-element).form-element
+                    .form-group.block-with-centered-element
+                      .grid-row
+                        .grid-col-xs-12.grid-col-xl-8
+                          button(type="submit").btn.btn-primary.btn-lg Get an offer
+                        .grid-col-xs-12.grid-col-xl-4
+                          small.required.centered-element.right.xl.block-limited-by-half Mandatory field
+              article(id="tab2").tab-pane
+                h3.accessibility tab 1 title
+                form(novalidate data-form-with-validation)
+                  fieldset
+                    .grid-row.no-bottom-indent
+                      .grid-col-xs-12.grid-col-md-8
+                        .form-group
+                          label.required(for="form-element-1") model
+                          .select-holder.form-element
+                            select(id="form-element-1")
+                              option MRT260  2012
+                              option MRT261  2012
+                              option MRT262  2012
+                      .grid-col-xs-12
+                        .form-group
+                          label(for="contact-us-2") information we should know
+                          textarea(cols="30" rows="10" id="contact-us-2" placeholder="We need the platform to be strong, and this is very urgent!").form-element.small-textarea
+                        .grid-row.no-bottom-indent
+                          .grid-col-xs-12.grid-col-lg-6
+                            .form-group
+                              label(for="order-3").required Name
+                              input(type="text" id="order-3" placeholder="Eyal Levy" data-required-form-element).form-element
+                          .grid-col-xs-12.grid-col-lg-6
+                            .form-group
+                              label(for="order-4") Company
+                              input(type="text" id="order-4" placeholder="Solel Bone").form-element
+                        .form-group
+                          label(for="order-5").required Phone / Email
+                          input(type="email" id="order-5" placeholder="eyal@sololbone.co.il" data-required-form-element).form-element
+                        .form-group.block-with-centered-element
+                          .grid-row
+                            .grid-col-xs-12.grid-col-xl-8
+                              button(type="submit").btn.btn-primary.btn-lg Get an offer
+                            .grid-col-xs-12.grid-col-xl-4
+                              small.required.centered-element.right.xl.block-limited-by-half Mandatory field
+        .grid-col-xs-12.grid-col-xl-6.grid-prepend-xl-1
+          aside.add-info.add-info-secondary
+            img(src="images/content/img-content-sidebar-2.jpg" width="220" height="625" alt="image description").is-visibility-hidden.is-xl-visibility-visible
+            img(src="images/content/img-content-sidebar-2-min.jpg" width="110" height="312" alt="image description").is-visibility-visible.is-xl-visibility-hidden
+            .item-table
+              .item-cell
+                .add-info-body
+                  h2.title Customer Service
+                  h3.h4.sub-title +972 3 959 7733
+                  p We will be happy to help you choose the right model for your need and place an easy order
+  include _organisms/footer

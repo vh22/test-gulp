@@ -1,6 +1,6 @@
 var $ = require('jquery');
 var addClass = require('./plugins/addClass');
-$('*').css('color', 'red');
+$('*').css('color', 'black');
 console.log('main file');
 
 addClass({

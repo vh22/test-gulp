@@ -1,38 +1,66 @@
 include ../_dev/common
-include ../_atoms/common
 doctype html
 = "\n\r"
 <html lang="en">
 head
-  meta(charset="utf-8")
   meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
-  title= projectName
+  meta(charset="utf-8")
+  block title
+    - var title = 'AbstractView Cranes'
+  title= title
   block fonts
-  // build:remove 
+  // build:remove&nbsp
   block bowerStyles
-  // /build 
+    link(rel="stylesheet", href="../bower_components/perfect-scrollbar/css/perfect-scrollbar.css")
+  // /build
   +replaceTpl('markup')
     block markupStyles
-  // build:css:build css/my-project.min.css 
+      link(rel="stylesheet", href="css/customScroll/perfect-scrollbar.css")
+  // build:css:build css/avi-cranes.min.css
   block styles
     link(rel="stylesheet", href="css/all.css")
-  // /build 
+  // /build
   = "\n\r  "
-  +ie('if IE 9')
-    link(rel="stylesheet", href="css/ie9.css")
-  // build:remove 
-  = "\n\r  "
-  +ie('if lt IE 9')
-    link(rel="stylesheet", href="css/ie.css")
-    script(src="../bower_components/respond/dest/respond.src.js")
-    script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
-  // /build 
+  // build:remove&nbsp
+  // /build
   +ieTpl
 body
   block body
-  // build:remove
-  script(src="js/app.bundle.js")
-  // /build 
+  // build:remove&nbsp
+  block bowerScripts
+    script(src="../bower_components/jquery/dist/jquery.min.js")
+    script(src="../bower_components/jquery-placeholder/jquery.placeholder.js")
+    script(src="../bower_components/hammerjs/hammer.min.js")
+    script(src="../bower_components/retina.js/dist/retina.min.js")
+    script(src="../bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.js")
+    script(src="../bower_components/tablesorter/jquery.tablesorter.min.js")
+  // /build
+  +replaceTpl('markup')
+    block markupScripts
+      script(src="js/plugins/jquery.min.js")
+      script(src="js/plugins/jquery.placeholder.min.js")
+      script(src="js/plugins/hammer.min.js")
+      script(src="js/plugins/retina.min.js")
+      script(src="js/plugins/perfect-scrollbar.jquery.min.js")
+      script(src="js/plugins/jquery.tablesorter.min.js")
+      script(src="js/2-jquery.tabs.js")
+      script(src="js/3-jquery.slider.js")
+      script(src="js/4-jquery.slideshow.js")
+      script(src="js/5-jquery.validation.js")
+      script(src="js/1-jquery.utilities.min.js")
+  // build:remove:build
+  //include plugins
+  block pluginsScripts
+    script(src="js/1-jquery.utilities.js")
+    script(src="js/2-jquery.tabs.js")
+    script(src="js/3-jquery.slider.js")
+    script(src="js/4-jquery.slideshow.js")
+    script(src="js/5-jquery.validation.js")
+
+  //init plugins
+  block initScripts
+    script(src="js/jquery.init-plugins.js")
+  // /build
   +replaceTpl('build')
-    script(src="js/my-project.min.js")
+    script(src="js/avi-cranes.min.js")
 != "\n\r</html>"

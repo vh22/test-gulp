@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta charset="utf-8">
+  <title>AVI UI</title>
+  <!-- build:remove&nbsp-->
+  <link rel="stylesheet" href="../bower_components/perfect-scrollbar/css/perfect-scrollbar.css">
+  <!-- /build-->
+  <!-- build:template
+  <% if (environment === 'markup') { %>
+  <link rel="stylesheet" href="css/customScroll/perfect-scrollbar.css">
+  <% } %>
+  /build -->
+  <!-- build:css:build css/avi-cranes.min.css-->
+  <link rel="stylesheet" href="css/all.css">
+  <!-- /build-->
+  
+  <!-- build:remove&nbsp-->
+  <!-- /build-->
+  <!-- build:template
+  <%= ie %>
+  /build -->
+</head>
+<body>
+  <!--wrapper starts-->
+  <div data-add-class-parent class="wrapper ui-wrapper">
+    <header class="ui-header">
+      <div class="ui-container">
+        <div class="logo ui-logo">AVI Cranes</div><strong class="ui-header-title">AVI Cranes Styleguide</strong>
+      </div>
+    </header>
+    <!--ui holder starts-->
+    <main class="ui-main">
+      <div class="ui-container">
+        <div id="color-palette"><strong class="ui-main-title">Color Palette</strong>
+          <div class="grid-row">
+            <div class="grid-col-sm-12 grid-col-lg-4">
+              <div class="ui-color-box ui-color-primary">
+                <div class="ui-color-heading">Primary Color</div>
+                <div class="ui-color-box-example"></div>
+              </div>
+            </div>
+            <div class="grid-col-sm-12 grid-col-lg-4">
+              <div class="ui-color-box ui-color-complementary">
+                <div class="ui-color-heading">Complementary Color</div>
+                <div class="ui-color-box-example"></div>
+              </div>
+            </div>
+            <div class="grid-col-sm-12 grid-col-lg-4">
+              <div class="ui-color-box ui-color-auxiliary">
+                <div class="ui-color-heading">Auxiliary Color</div>
+                <div class="ui-color-box-example"></div>
+              </div>
+            </div>
+            <div class="grid-col-sm-12 grid-col-lg-4">
+              <div class="ui-color-box ui-color-success">
+                <div class="ui-color-heading">Success Color</div>
+                <div class="ui-color-box-example"></div>
+              </div>
+            </div>
+            <div class="grid-col-sm-12 grid-col-lg-4">
+              <div class="ui-color-box ui-color-info">
+                <div class="ui-color-heading">Info Color</div>
+                <div class="ui-color-box-example"></div>
+              </div>
+            </div>
+            <div class="grid-col-sm-12 grid-col-lg-4">
+              <div class="ui-color-box ui-color-warning">
+                <div class="ui-color-heading">Warning Color</div>
+                <div class="ui-color-box-example"></div>
+              </div>
+            </div>
+            <div class="grid-col-sm-12 grid-col-lg-4">
+              <div class="ui-color-box ui-color-danger">
+                <div class="ui-color-heading">Danger Color</div>
+                <div class="ui-color-box-example"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="typography"><strong class="ui-main-title">Typography</strong>
+          <div id="fonts"><strong class="ui-title">Fonts</strong><span class="ui-font ui-font-1">Regular font</span><span class="ui-font ui-font-2">Thin font</span><span class="ui-font ui-font-3">Light font</span><span class="ui-font ui-font-4">Medium font</span><span class="ui-font ui-font-5">Bold font</span><span class="ui-font ui-font-6">Extra bold font</span></div>
+          <div id="headings"><strong class="ui-title">Headings</strong>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6><strong class="ui-title">Headings with secondary text</strong>
+            <h1>Heading 1<small> Secondary Text</small></h1>
+            <h2>Heading 2<small> Secondary Text</small></h2>
+            <h3>Heading 3<small> Secondary Text</small></h3>
+            <h4>Heading 4<small> Secondary Text</small></h4>
+            <h5>Heading 5<small> Secondary Text</small></h5>
+            <h6>Heading 6<small> Secondary Text</small></h6><strong class="ui-title">Headings with modificator</strong><strong class="ui-sub-title">Main heading</strong>
+            <h1 class="heading-main">Heading 1</h1><strong class="ui-sub-title">Heading with border</strong>
+            <h1 class="heading-with-border">Heading 1</h1><strong class="ui-sub-title">Underlined heading</strong>
+            <div class="ui-block">
+              <h1 class="heading-underlined">Heading 1</h1>
+            </div><strong class="ui-sub-title">Complementary heading</strong>
+            <h1 class="heading-complementary">Heading 1</h1><strong class="ui-sub-title">Auxiliary heading</strong>
+            <h1 class="heading-auxiliary">Heading 1</h1>
+          </div>
+          <div id="paragraphs"><strong class="ui-title">Paragraphs</strong><strong class="ui-sub-title">Body copy</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.</p><strong class="ui-sub-title">Lead body copy</strong>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.</p>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.</p><strong class="ui-sub-title">Body alternative text</strong>
+            <p class="alternative-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.</p><strong class="ui-sub-title">Body alternative font</strong>
+            <p class="alternative-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.</p>
+          </div>
+          <div id="small"><strong class="ui-title">Small text</strong><small class="required">Mandatory field</small></div>
+          <div id="blockquote"><strong class="ui-title">Blockquote</strong>
+            <blockquote cite="#" class="blockquote">
+              <q class="quote">JOB THIS BIG TAKES MORE THAN JUSTLIFTING POWER</q>
+              <cite class="cite">Cranes Project</cite>
+            </blockquote><strong class="ui-title">Blockquote light with quotes</strong>
+            <div class="ui-block ui-black">
+              <blockquote cite="#" class="blockquote blockquote-alternative">
+                <q class="quote">“Keep your dreams alive. Understand to achieve anything requires faith hard work, determination and dedication.”</q>
+                <cite class="cite"><span class="h5 big">AVI JOCHANAN</span>DREAMER & FOUNDER, AVI CRANES</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div id="atoms"><strong class="ui-main-title">Atoms</strong>
+          <div id="logo"><strong class="ui-title">Logos</strong><strong class="ui-sub-title">Base logo</strong>
+            <div class="ui-inline-block ui-gray">
+              <div class="logo">AVI Cranes</div>
+            </div><strong class="ui-sub-title">Base small logo</strong>
+            <div class="ui-inline-block ui-gray">
+              <div class="ico-logo-min"></div>
+            </div><strong class="ui-sub-title">Alternative logo</strong>
+            <div class="ui-inline-block ui-gray">
+              <div class="logo-alternative">AVI Cranes</div>
+            </div><strong class="ui-sub-title">Alternative small logo</strong>
+            <div class="ui-inline-block ui-gray">
+              <div class="ico-logo-alternative-min"></div>
+            </div>
+          </div>
+          <div id="icons"><strong class="ui-title">Icons</strong>
+            <div class="ui-inline-block"><i class="ico-chevron-black"></i></div>
+            <div class="ui-inline-block"><i class="ico-chevron-gray"></i></div>
+            <div class="ui-inline-block ui-black"><i class="ico-menu"></i></div>
+            <div class="ui-inline-block ui-black"><i class="ico-phone"></i></div>
+            <div class="ui-inline-block"><i class="ico-back"></i></div>
+            <div class="ui-inline-block ui-black"><i class="ico-check"></i></div>
+            <div class="ui-inline-block ui-black"><i class="ico-chevron-left"></i></div>
+            <div class="ui-inline-block ui-black"><i class="ico-chevron-right"></i></div>
+            <div class="ui-inline-block"><i class="ico-minus"></i></div>
+            <div class="ui-inline-block"><i class="ico-plus"></i></div>
+            <div class="ui-inline-block ui-black"><i class="ico-play"></i></div>
+            <div class="ui-inline-block ui-black"><i class="ico-play-min"></i></div>
+          </div>
+          <div id="buttons"><strong class="ui-title">Buttons</strong><strong class="ui-sub-title">Button color variations</strong><a href="#" class="btn btn-default btn-block">Default button</a><a href="#" class="btn btn-primary btn-block">Primary button</a><a href="#" class="btn btn-success btn-block">Success button</a><a href="#" class="btn btn-info btn-block">Info button</a><a href="#" class="btn btn-warning btn-block">Warning button</a><a href="#" class="btn btn-danger btn-block">Danger button</a><strong class="ui-sub-title">Button layout variations</strong>
+            <div class="ui-inline-block"><a href="#" class="btn btn-primary">Inline button</a></div>
+            <div class="ui-inline-block"><a href="#" class="btn btn-primary">Inline button</a></div><a href="#" class="btn btn-primary btn-block">Block button</a><strong class="ui-sub-title">Button size variations</strong>
+            <div class="ui-inline-block"><a href="#" class="btn btn-primary btn-lg">Get an offer</a></div>
+            <div class="ui-inline-block"><a href="#" class="btn btn-primary">ORDER A LOW BED TRAILER</a></div>
+            <div class="ui-inline-block"><a href="#" class="btn btn-primary btn-md">TECHNICAL DATA</a></div>
+            <div class="ui-inline-block"><a href="#" class="btn btn-primary btn-sm">Small button</a></div><strong class="ui-sub-title">Buttons with decoration</strong><a href="#" class="btn btn-alternative btn-default btn-block">Alternative default button</a><a href="#" class="btn btn-alternative btn-primary btn-block">Alternative primary button</a><a href="#" class="btn btn-alternative btn-success btn-block">Alternative success button</a><a href="#" class="btn btn-alternative btn-info btn-block">Alternative info button</a><a href="#" class="btn btn-alternative btn-warning btn-block">Alternative warning button</a><a href="#" class="btn btn-alternative btn-danger btn-block">Alternative danger button</a><a href="#" class="btn btn-primary btn-block btn-with-shadow">With shadow</a><strong class="ui-sub-title">Other buttons</strong>
+            <div class="ui-inline-block ui-black"><a href="#" class="ico-play"></a></div>
+            <div class="ui-inline-block ui-black"><a href="#" class="ico-play"></a></div>
+            <div class="ui-inline-block"><a href="#" class="ico-chevron-left"></a></div>
+            <div class="ui-inline-block"><a href="#" class="ico-chevron-right"></a></div>
+            <div class="ui-inline-block"><a href="#" class="btn btn-link"><i class="ico-back"></i><span>Back To Project</span></a></div>
+          </div>
+          <div id="list-elements"><strong class="ui-title">Lists</strong>
+            <div class="grid-row">
+              <div class="grid-col-xs-12 grid-col-md-4"><strong class="ui-sub-title">One column list</strong>
+                <h4 class="list-title">About us</h4>
+                <ul class="list list-of-columns">
+                  <li>About Avi Cranes</li>
+                  <li>History</li>
+                  <li>Jobs</li>
+                  <li>Contact Us</li>
+                </ul>
+              </div>
+              <div class="grid-col-xs-12 grid-col-md-4"><strong class="ui-sub-title">Two columns list with highlighted item</strong>
+                <h4 class="list-title">heavy transport</h4>
+                <ul data-col-number="2" class="list list-of-columns">
+                  <li>About</li>
+                  <li>Scissors</li>
+                  <li>Boom Lifts</li>
+                  <li>Vertical</li>
+                  <li>Truck Mounted</li>
+                  <li>For Sale</li>
+                  <li>Order</li>
+                </ul>
+              </div>
+            </div><strong class="ui-sub-title">List with thumbnail</strong>
+            <ul class="list list-with-thumbnails grid-row">
+              <li class="grid-col-lg-4">
+                <figure class="thumbnail"><img src="images/content/img-thumbnail-1.jpg" alt="image description" width="180" height="155" class="responsive-img">
+                  <figcaption class="thumbnail-caption">ROUGH TERRAIN</figcaption>
+                </figure>
+              </li>
+              <li class="grid-col-lg-4">
+                <figure class="thumbnail"><img src="images/content/img-thumbnail-2.jpg" alt="image description" width="180" height="155" class="responsive-img">
+                  <figcaption class="thumbnail-caption">HYDRAULIC</figcaption>
+                </figure>
+              </li>
+              <li class="grid-col-lg-4">
+                <figure class="thumbnail"><img src="images/content/img-thumbnail-3.jpg" alt="image description" width="180" height="155" class="responsive-img">
+                  <figcaption class="thumbnail-caption">CRAWLER</figcaption>
+                </figure>
+              </li>
+            </ul><strong class="ui-sub-title">Inline list</strong>
+            <ul class="list list-inline">
+              <li>Cranes</li>
+              <li>Access Platforms</li>
+              <li>Heavy Transport</li>
+            </ul><strong class="ui-sub-title">Vertical list</strong>
+            <ul class="list list-vertical">
+              <li>1992</li>
+              <li>1993</li>
+              <li>1994</li>
+            </ul><strong class="ui-sub-title">Vertical list with points</strong>
+            <ul class="list list-vertical list-with-bullets">
+              <li>1992</li>
+              <li>1993</li>
+              <li>1994</li>
+            </ul><strong class="ui-sub-title">Delimited inline list</strong>
+            <ul class="list list-inline list-delimited">
+              <li><a href="#">Designed by Three Bears</a></li>
+              <li><a href="#">Developed by Simple Idea</a></li>
+            </ul><strong class="ui-sub-title">underlined list</strong>
+            <ul class="list list-inline list-underlined">
+              <li>About Avi Cranes</li>
+              <li>History</li>
+              <li>Jobs</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <div id="form-elements"><strong class="ui-title">Form elements</strong><strong class="ui-sub-title">Input types</strong>
+            <input type="email" placeholder="Email input" class="form-element">
+            <input type="url" placeholder="Url input" class="form-element">
+            <input type="tel" placeholder="Tel input" class="form-element">
+            <input type="search" placeholder="Search input" class="form-element"><strong class="ui-sub-title">Form groups</strong>
+            <div class="form-group">
+              <label for="ui-input-2">Default label</label>
+              <input type="password" id="ui-input-2" placeholder="Password input" class="form-element">
+            </div>
+            <div class="form-group">
+              <label for="ui-input-1" class="required">Mandatory field</label>
+              <input type="text" id="ui-input-1" placeholder="Text Input" class="form-element">
+            </div><strong class="ui-sub-title">Textarea</strong>
+            <textarea cols="30" rows="10" placeholder="Textarea" class="form-element"></textarea><strong class="ui-sub-title">Select</strong>
+            <div class="select-holder form-element">
+              <select>
+                <option>Default select look</option>
+                <option>Default select look 2</option>
+                <option>Default select look 3</option>
+              </select>
+            </div><strong class="ui-sub-title">Checkbox</strong>
+            <input type="checkbox" id="ui-checkbox-1" class="checkbox-input">
+            <label for="ui-checkbox-1" class="checkbox-label">Electrical</label>
+            <input type="checkbox" id="ui-checkbox-2" class="checkbox-input">
+            <label for="ui-checkbox-2" class="checkbox-label">Electrical</label><strong class="ui-sub-title">Radio</strong>
+            <input type="radio" name="ui-radio-1" id="ui-radio-1" class="radio-input">
+            <label for="ui-radio-1" class="radio-label">Electrical</label>
+            <input type="radio" name="ui-radio-1" id="ui-radio-2" class="radio-input">
+            <label for="ui-radio-2" class="radio-label">Electrical</label><strong class="ui-sub-title">Checkbox inline</strong>
+            <div class="checkbox-inline">
+              <input type="checkbox" id="ui-checkbox-3" class="checkbox-input">
+              <label for="ui-checkbox-3" class="checkbox-label">Electrical</label>
+            </div>
+            <div class="checkbox-inline">
+              <input type="checkbox" id="ui-checkbox-4" class="checkbox-input">
+              <label for="ui-checkbox-4" class="checkbox-label">Electrical</label>
+            </div><strong class="ui-sub-title">Radio inline</strong>
+            <div class="radio-inline">
+              <input type="radio" name="ui-radio-1" id="ui-radio-3" class="radio-input">
+              <label for="ui-radio-3" class="radio-label">Electrical</label>
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="ui-radio-1" id="ui-radio-4" class="radio-input">
+              <label for="ui-radio-4" class="radio-label">Electrical</label>
+            </div>
+          </div>
+          <div id="copyright"><strong class="ui-title">Copyright</strong>
+            <div class="copyright">2015  © All Rights Reserved</div>
+          </div>
+          <div id="group-of-atoms"><strong class="ui-title">Group of atoms</strong><strong class="ui-sub-title">Logo and address</strong><i class="ico-logo-min-red"></i>
+            <address class="address">
+              4 Katzenelson Street<br>
+              58016 Azor, Israel<br>
+              Phone: +972-3-5561813<br>
+              Fax: +972-3-5561799<br>
+            </address><strong class="ui-sub-title">Block with shadow</strong>
+            <div class="block-with-shadow">
+              <h4 class="list-title">About us</h4>
+              <ul class="list list-of-columns">
+                <li>4 kATZENELSON sT. 58016</li>
+                <li>AZORPOB 14460</li>
+                <li>TEL. +972 3 557 2222</li>
+                <li>FAX +972 3 557 2222</li>
+              </ul>
+              <h4 class="list-title">About us</h4>
+              <ul class="list list-of-columns">
+                <li>4 kATZENELSON sT. 58016</li>
+                <li>AZOR POB 14460</li>
+                <li>TEL. +972 3 557 2222</li>
+                <li>FAX +972 3 557 2222</li>
+              </ul>
+              <h4 class="list-title">About us</h4>
+              <ul class="list list-of-columns">
+                <li>4 kATZENELSON sT. 58016</li>
+                <li>AZORPOB 14460</li>
+                <li>TEL. +972 3 557 2222</li>
+                <li>FAX +972 3 557 2222</li>
+              </ul>
+              <h4 class="list-title">About us</h4>
+              <ul class="list list-of-columns">
+                <li>4 kATZENELSON sT. 58016</li>
+                <li>AZORPOB 14460</li>
+                <li>TEL. +972 3 557 2222</li>
+                <li>FAX +972 3 557 2222</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="molecules"><strong class="ui-main-title">Molecules</strong>
+          <div id="navigation"><strong class="ui-title">Navigation</strong><strong class="ui-sub-title is-hidden is-lg-visible">Secondary navigation</strong>
+            <nav class="nav-secondary is-hidden is-lg-inline-visible">
+              <h3 class="accessibility">Secondary navigation</h3>
+              <ul class="list list-inline list-delimited-vertical">
+                <li><a href="about-template.html">About Avi Cranes</a></li>
+                <li><a href="about-history.html">Our History</a></li>
+                <li><a href="about-jobs.html">Jobs at Avi Cranes</a></li>
+                <li></li><a href="contact-us.html">Contact Us</a>
+              </ul>
+            </nav><strong class="ui-title">Page navigation</strong>
+            <nav class="page-nav">
+              <ul class="list list-inline">
+                <li><a href="#">Cranes</a></li>
+                <li><a href="access-platforms-about.html">Access platforms</a></li>
+                <li><a href="#">Heavy Transport</a></li>
+              </ul>
+            </nav><strong class="ui-title">Full navigation</strong>
+            <nav class="full-nav">
+              <ul class="list">
+                <li>
+                  <h4 class="list-title">About us</h4>
+                  <ul class="list list-of-columns">
+                    <li><a href="#">About Avi Cranes</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <h4 class="list-title">Cranes Division</h4>
+                  <ul class="list list-of-columns">
+                    <li><a href="#">About Cranes Division</a></li>
+                    <li><a href="#">Cranes</a></li>
+                    <li><a href="#">For Sale</a></li>
+                    <li><a href="#">Order a Crane</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <h4 class="list-title">heavy transport</h4>
+                  <ul data-col-number="2" class="list list-of-columns">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Truck Mounted</a></li>
+                    <li><a href="#">Scissors</a></li>
+                    <li><a href="#">For Sale</a></li>
+                    <li><a href="#">Boom Lifts</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Vertical</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <h4 class="list-title">Access Platforms</h4>
+                  <ul data-col-number="2" class="list list-of-columns">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Truck Mounted</a></li>
+                    <li><a href="#">Scissors</a></li>
+                    <li><a href="#">For Sale</a></li>
+                    <li><a href="#">Boom Lifts</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Vertical</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div id="product-thumbnail"><strong class="ui-title">Product thumbnail</strong>
+            <div class="product-thumbnail-wrapper">
+              <div class="product-thumbnail"><a href="#"><img src="images/content/img-trailers-1.jpg" width="214" height="38" alt="image description" class="responsive-img"></a><a href="#">
+                  <h2 class="h5 big product-thumbnail-heading">Low Bed Trailers</h2></a><a href="#" class="btn btn-primary btn-sm">TECHNICAL DATA</a></div>
+              <div class="product-thumbnail"><a href="#"><img src="images/content/img-trailers-2.jpg" width="219" height="42" alt="image description" class="responsive-img"></a><a href="#">
+                  <h2 class="h5 big product-thumbnail-heading">SPECIAL TRAILERS</h2></a><a href="#" class="btn btn-primary btn-sm">TECHNICAL DATA</a></div>
+              <div class="product-thumbnail"><a href="#"><img src="images/content/img-trailers-3.jpg" width="86" height="29" alt="image description" class="responsive-img"></a><a href="#">
+                  <h2 class="h5 big product-thumbnail-heading">MODULAR ROWS Trailers</h2></a><a href="#" class="btn btn-primary btn-sm">TECHNICAL DATA</a></div>
+              <div class="product-thumbnail"><a href="#"><img src="images/content/img-trailers-4.jpg" width="229" height="46" alt="image description" class="responsive-img"></a><a href="#">
+                  <h2 class="h5 big product-thumbnail-heading">OTHER MODULAR Trailers</h2></a><a href="#" class="btn btn-primary btn-sm">TECHNICAL DATA</a></div>
+            </div>
+          </div>
+          <div id="breadcrumbs"><strong class="ui-title">Breadcrumbs</strong>
+            <ul class="list list-inline list-delimited breadcrumbs">
+              <li><a href="index.html">Avi cranes</a></li>
+              <li><a href="access-platforms-about.html">Access platforms</a></li>
+              <li>Buy an access platform</li>
+            </ul>
+          </div>
+          <div id="tabs"><strong class="ui-title">Tabs</strong>
+            <ul data-tab-container class="list tabs-nav">
+              <li class="tab tab-is-active"><span data-tab-link="#tab1">Buy</span></li>
+              <li class="tab"><span data-tab-link="#tab2">Rent</span></li>
+            </ul>
+            <section class="tabs-content">
+              <h5 class="accessibility">Tabs content</h5>
+              <article id="tab1" class="tab-pane">
+                <h4 class="accessibility">tab 1 title</h4>
+                <p>content 1</p>
+              </article>
+              <article id="tab2" class="tab-pane">
+                <h4 class="accessibility">tab 1 title</h4>
+                <p>content 2</p>
+              </article>
+            </section>
+          </div>
+          <div id="tables"><strong class="ui-title">Tables</strong>
+            <div data-custom-scroll class="table-responsive is-hidden is-sm-visible">
+              <table data-table-sorting class="table">
+                <caption class="accessibility">table #1</caption>
+                <thead class="table-head">
+                  <tr>
+                    <th class="col-1">Model</th>
+                    <th>Working height</th>
+                    <th>Machine Weight</th>
+                    <th>Horizontal Reach</th>
+                    <th>Max Load</th>
+                  </tr>
+                </thead>
+                <tbody class="table-body">
+                  <tr>
+                    <td>161 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>162 atj</td>
+                    <td>7.49m</td>
+                    <td>1550kg</td>
+                    <td>35m</td>
+                    <td>234kg</td>
+                  </tr>
+                  <tr>
+                    <td>163 atj</td>
+                    <td>7.39m</td>
+                    <td>1551kg</td>
+                    <td>33m</td>
+                    <td>233kg</td>
+                  </tr>
+                  <tr>
+                    <td>164 atj</td>
+                    <td>7.29m</td>
+                    <td>1552kg</td>
+                    <td>32m</td>
+                    <td>232kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="expanding-list"><strong class="ui-title">Expanding list</strong>
+            <ul class="list list-vertical list-expanding">
+              <li data-add-class-parent><span data-add-class>Assistant Cranes Opertaor<em class="list-info">Rishon Lezion</em></span><a href="#" class="btn btn-md btn-primary">APPLY</a>
+                <ul id="list-tab-1" class="list sub-list-expanding">
+                  <li>Offshore Crane Operator’s Certificate</li>
+                  <li>Helicopter Landing Officer, HLO, certificate</li>
+                  <li>CAA Radio Operator Certificate</li>
+                  <li class="list-cta"><a href="#" class="btn btn-lg btn-primary">APPLY</a></li>
+                </ul>
+              </li>
+              <li data-add-class-parent><span data-add-class>Assistant Barge Engineer & Barge Engineer<em class="list-info">Rishon Lezion</em></span><a href="#" class="btn btn-md btn-primary">APPLY</a>
+                <ul id="list-tab-2" class="list sub-list-expanding">
+                  <li>Offshore Crane Operator’s Certificate</li>
+                  <li>Helicopter Landing Officer, HLO, certificate</li>
+                  <li>CAA Radio Operator Certificate</li>
+                  <li class="list-cta"><a href="#" class="btn btn-lg btn-primary">APPLY</a></li>
+                </ul>
+              </li>
+              <li data-add-class-parent><span data-add-class>Logistics Coordinator<em class="list-info">Tel Aviv</em></span><a href="#" class="btn btn-md btn-primary">APPLY</a>
+                <ul id="list-tab-3" class="list sub-list-expanding">
+                  <li>Offshore Crane Operator’s Certificate</li>
+                  <li>Helicopter Landing Officer, HLO, certificate</li>
+                  <li>CAA Radio Operator Certificate</li>
+                  <li class="list-cta"><a href="#" class="btn btn-lg btn-primary">APPLY</a></li>
+                </ul>
+              </li>
+              <li data-add-class-parent><span data-add-class>Assistant Electrican & Electrician<em class="list-info">Rishon Lezion</em></span><a href="#" class="btn btn-md btn-primary">APPLY</a>
+                <ul id="list-tab-4" class="list sub-list-expanding">
+                  <li>Offshore Crane Operator’s Certificate</li>
+                  <li>Helicopter Landing Officer, HLO, certificate</li>
+                  <li>CAA Radio Operator Certificate</li>
+                  <li class="list-cta"><a href="#" class="btn btn-lg btn-primary">APPLY</a></li>
+                </ul>
+              </li>
+              <li data-add-class-parent><span data-add-class>Assistant Cranes Opertaor<em class="list-info">Rishon Lezion</em></span><a href="#" class="btn btn-md btn-primary">APPLY</a>
+                <ul id="list-tab-5" class="list sub-list-expanding">
+                  <li>Offshore Crane Operator’s Certificate</li>
+                  <li>Helicopter Landing Officer, HLO, certificate</li>
+                  <li>CAA Radio Operator Certificate</li>
+                  <li class="list-cta"><a href="#" class="btn btn-lg btn-primary">APPLY</a></li>
+                </ul>
+              </li>
+              <li data-add-class-parent><span data-add-class>Assistant Barge Engineer & Barge Engineer<em class="list-info">Rishon Lezion</em></span><a href="#" class="btn btn-md btn-primary">APPLY</a>
+                <ul id="list-tab-6" class="list sub-list-expanding">
+                  <li>Offshore Crane Operator’s Certificate</li>
+                  <li>Helicopter Landing Officer, HLO, certificate</li>
+                  <li>CAA Radio Operator Certificate</li>
+                  <li class="list-cta"><a href="#" class="btn btn-lg btn-primary">APPLY</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div id="info-box"><strong class="ui-title">Info box</strong>
+            <figure class="info-box"><img src="images/content/img-box-info-1.jpg" width="428" height="618" alt="image description" class="responsive-img">
+              <figcaption class="info-box-caption"><a href="#" class="btn btn-primary">ORDER A CRANE</a></figcaption>
+            </figure>
+          </div>
+          <div id="media"><strong class="ui-title">Media</strong>
+            <div class="grid-row">
+              <div class="grid-col-xs-12 grid-col-sm-6 grid-col-lg-4">
+                <figure class="media"><a href="project-page.html" class="media-hover"><span class="btn btn-md btn-alternative btn-complementary">READ MORE</span></a><img src="images/content/img-media-1.jpg" width="344" height="226" alt="image description" class="responsive-img scalable-img">
+                  <figcaption class="media-info">
+                    <div class="media-info-content">A JOB THIS BIG TAKES MORE THAN jUST LIFTING POWER</div>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div id="scroll-block"><strong class="ui-title">Block with scroll</strong>
+            <div data-custom-scroll class="table-with-fixed-height is-hidden is-sm-visible">
+              <table class="table">
+                <caption class="accessibility">table #1</caption>
+                <thead class="table-head">
+                  <tr>
+                    <th>Model</th>
+                    <th class="sorted-by">Working height</th>
+                    <th>Machine Weight</th>
+                    <th>Horizontal Reach</th>
+                    <th>Max Load</th>
+                  </tr>
+                </thead>
+                <tbody class="table-body">
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                  <tr>
+                    <td>160 atj</td>
+                    <td>7.79m</td>
+                    <td>1550kg</td>
+                    <td>30m</td>
+                    <td>230kg</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="add-info"><strong class="ui-title">Add info block</strong>
+            <div class="grid-row">
+              <div class="grid-col-xs-12 grid-col-xl-5">
+                <div class="content-sidebar max-width">
+                  <aside class="add-info"><img src="images/content/img-content-sidebar-1.png" width="310" height="534" alt="image description" class="is-visibility-hidden is-xl-visibility-visible"><img src="images/content/img-content-sidebar-1-min.png" width="155" height="267" alt="image description" class="is-visibility-visible is-xl-visibility-hidden">
+                    <div class="add-info-body">
+                      <h2 class="title">Customer Service</h2><span class="h4 sub-title">+972 3 959 7733</span>
+                      <p>We will be happy to help you choose the right model for your need and place an easy order</p>
+                    </div>
+                    <footer class="add-info-footer"><small>BY LAW, AN ACCES PLATFORM OPERATOR MUST Practice for Working Safely at Heights.LEARN ABOUT OUR SAFETY CENTER</small></footer>
+                  </aside>
+                </div>
+              </div>
+              <div class="grid-col-xs-12 grid-col-xl-6">
+                <aside class="add-info add-info-secondary"><img src="images/content/img-content-sidebar-2.jpg" width="220" height="625" alt="image description" class="is-visibility-hidden is-xl-visibility-visible"><img src="images/content/img-content-sidebar-2-min.jpg" width="110" height="312" alt="image description" class="is-visibility-visible is-xl-visibility-hidden">
+                  <div class="item-table">
+                    <div class="item-cell">
+                      <div class="add-info-body">
+                        <h2 class="title">Customer Service</h2>
+                        <h3 class="h4 sub-title">+972 3 959 7733</h3>
+                        <p>We will be happy to help you choose the right model for your need and place an easy order</p>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="organisms" data-nav-toggle-parent class="ui-organisms"><span data-overlay class="overlay"></span><strong class="ui-main-title">Organisms</strong><strong class="ui-sub-title">Header</strong>
+          <div class="scroll-holder responsive-xl">
+            <div id="ui-header" class="ui-organism-header">
+              <div data-shifted-elements class="header-wrapper"><span data-overlay class="overlay"></span>
+                <header id="header" class="header-main">
+                  <div class="header-main-mobile is-xxl-hidden"><a href="#" data-nav-toggle class="header-btn-mobile align-left"><i class="ico-menu"></i></a><a href="index.html" class="logo is-cover">AVI Cranes</a><a href="#" class="header-btn-mobile align-right"><i class="ico-phone"></i></a></div>
+                  <div class="container">
+                    <nav data-nav-main class="nav-main">
+                      <div class="nav-main-content">
+                        <div class="left-side-menu">
+                          <ul class="list list-inline">
+                            <li data-submenu-toggle><a href="index.html" class="is-xxl-hidden">HOME</a></li>
+                            <li data-submenu-toggle><a href="cranes-about.html">CRANES DIVISION</a>
+                              <ul class="list-sub-list list list-vertical">
+                                <li><a href="cranes-about.html">about</a></li>
+                                <li><a href="cranes-rough-terrain.html">rough terrain</a></li>
+                                <li><a href="cranes-hydraulic.html">hydraulic</a></li>
+                                <li><a href="cranes-crawlers.html">crawler</a></li>
+                                <li><a href="cranes-for-sale.html">FOR SALE</a></li>
+                                <li><a href="cranes-order.html">order</a></li>
+                              </ul>
+                            </li>
+                            <li data-submenu-toggle><a href="heavy-about.html">HEAVY TRANSPORT</a>
+                              <ul class="list-sub-list list list-vertical">
+                                <li><a href="heavy-about.html">about</a></li>
+                                <li><a href="heavy-self-loaders.html">Self LoadER Cranes</a></li>
+                                <li><a href="heavy-trailers.html">Trailers</a></li>
+                                <li><a href="heavy-low-bed.html">Low Bed Trailers</a></li>
+                                <li><a href="heavy-telescopic.html">Telescopic handlers</a></li>
+                                <li><a href="heavy-forklifts.html">Forklifts</a></li>
+                                <li><a href="heavy-special.html">SPECIAL WORKS</a></li>
+                              </ul>
+                            </li>
+                            <li data-submenu-toggle><a href="access-platforms-about.html">ACCESS PLATFORMS</a>
+                              <ul class="list-sub-list list list-vertical">
+                                <li><a href="access-platforms-about.html">about</a></li>
+                                <li><a href="access-platforms-scissors.html">SCISSORS</a></li>
+                                <li><a href="access-platforms.html">BOOM LIFTS</a></li>
+                                <li><a href="access-platforms-vertical.html">VERTICAL</a></li>
+                                <li><a href="access-platforms-truck-mounted.html">TRUCK MOUNTED</a></li>
+                                <li><a href="access-platforms-for-sale.html">FOR SALE</a></li>
+                                <li><a href="access-platforms-buy-used.html">order</a></li>
+                              </ul>
+                            </li>
+                            <li data-submenu-toggle><a href="project-main.html">PROJECTS</a></li>
+                          </ul>
+                        </div>
+                        <div class="right-side-menu">
+                          <ul class="list list-inline">
+                            <li data-submenu-toggle><a href="about-template.html">ABOUT US</a>
+                              <ul class="list-sub-list list list-vertical">
+                                <li><a href="about-vision.html">THE VISION</a></li>
+                                <li><a href="about-template.html">ABOUT US</a></li>
+                                <li><a href="about-history.html">HISTORY</a></li>
+                                <li><a href="about-jobs.html">JOBs</a></li>
+                                <li><a href="contact-us.html">CONTACT</a></li>
+                              </ul>
+                            </li>
+                            <li data-submenu-toggle><a href="safety.html">SAFETY</a></li>
+                            <li data-submenu-toggle><a href="contact-us.html">CONTACT</a></li>
+                            <li class="is-visibility-hidden is-xxl-visibility-visible"><a href="tel:+972-3-557-2222" class="is-not-link">+972-3-557-2222</a></li>
+                            <li data-submenu-toggle class="is-visibility-hidden is-xxl-visibility-visible"><a href="#" class="with-caret">HEBREW</a>
+                              <ul class="list-sub-list list list-vertical">
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">French</a></li>
+                                <li><a href="#">German</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div><a href="index.html" class="logo header-main-logo is-hidden is-xxl-visible">AVI Cranes</a>
+                      </div>
+                      <div class="main-info"><a href="index.html" class="ico-logo-min-red"></a>
+                        <address class="address">
+                          <ul class="list grid-row">
+                            <li class="grid-col-xs-12">4 Katzenelson<span class="is-xxl-hidden">&nbsp;St.</span><span class="is-hidden is-xxl-inline-visible">&nbsp;Street</span><br>58016 Azor, Israel</li>
+                            <li class="grid-col-lg-12">Phone: +972-3-5561813</li>
+                            <li class="grid-col-lg-12">Fax: +972-3-5561799</li>
+                          </ul>
+                        </address>
+                      </div>
+                    </nav>
+                  </div>
+                </header>
+              </div>
+            </div>
+          </div><strong class="ui-sub-title">Footer</strong>
+          <div class="scroll-holder">
+            <div id="ui-footer-item" class="ui-footer-item">
+              <footer class="footer-main sticky-footer">
+                <div class="item-table">
+                  <div class="item-cell">
+                    <div class="container">
+                      <nav class="full-nav">
+                        <ul class="list">
+                          <li>
+                            <h2 class="h4 list-title">About us</h2>
+                            <ul class="list list-of-columns">
+                              <li><a href="about-template.html">About Avi Cranes</a></li>
+                              <li><a href="about-history.html">History</a></li>
+                              <li><a href="about-jobs.html">Jobs</a></li>
+                              <li><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <h2 class="h4 list-title">Cranes Division</h2>
+                            <ul class="list list-of-columns">
+                              <li><a href="cranes-about.html">About Cranes Division</a></li>
+                              <li><a href="cranes-crawlers.html">Cranes</a></li>
+                              <li><a href="cranes-for-sale.html">For Sale</a></li>
+                              <li><a href="cranes-order.html">Order a Crane</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <h2 class="h4 list-title">heavy transport</h2>
+                            <ul data-col-number="2" class="list list-of-columns">
+                              <li><a href="heavy-about.html">About</a></li>
+                              <li><a href="access-platforms-truck-mounted.html">Truck Mounted</a></li>
+                              <li><a href="access-platforms-scissors.html">Scissors</a></li>
+                              <li><a href="heavy-order.html">For Sale</a></li>
+                              <li><a href="access-platforms.html">Boom Lifts</a></li>
+                              <li><a href="heavy-order.html">Order</a></li>
+                              <li><a href="access-platforms-vertical.html">Vertical</a></li>
+                            </ul><span class="copyright is-hidden is-xl-visible">2015 &copy; All Rights Reserved</span>
+                          </li>
+                          <li>
+                            <h2 class="h4 list-title">Access Platforms</h2>
+                            <ul data-col-number="2" class="list list-of-columns">
+                              <li><a href="access-platforms-about.html">About</a></li>
+                              <li><a href="access-platforms-truck-mounted.html">Truck Mounted</a></li>
+                              <li><a href="access-platforms-scissors.html">Scissors</a></li>
+                              <li><a href="access-platforms-for-sale.html">For Sale</a></li>
+                              <li><a href="access-platforms.html">Boom Lifts</a></li>
+                              <li><a href="access-platforms-buy-used.html">Order</a></li>
+                              <li><a href="access-platforms-vertical.html">Vertical</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+                      <div class="main-info"><a href="#" class="logo-alternative"></a>
+                        <address class="address">
+                          <ul class="list grid-row">
+                            <li>4 Katzenelson<span class="is-xl-hidden">&nbsp;St.</span><span class="is-hidden is-xl-inline-visible">&nbsp;Street</span><br class="is-hidden is-xl-inline-visible">&nbsp;58016 Azor, Israel</li>
+                            <li><a href="tel:97235561813">Phone: +972-3-5561813</a>&nbsp;&nbsp;<a href="tel:97235561799">Fax: +972-3-5561799</a></li>
+                          </ul>
+                        </address>
+                      </div>
+                      <ul class="list list-inline list-delimited developers">
+                        <li>Designed by&nbsp;<a href="#">Three Bears</a></li>
+                        <li>Developed by&nbsp;<a href="#">Simple Idea</a></li>
+                      </ul><span class="copyright is-xl-hidden">2015 &copy; All Rights Reserved</span>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div><strong class="ui-sub-title">Galleries</strong><strong class="ui-title">Slideshow</strong>
+          <article class="slideshow">
+            <header class="slideshow-header">
+              <div class="item-table">
+                <div class="item-cell"><a href="#" class="btn-link-back"><i class="ico-back"></i><span>Back To Project</span></a></div>
+              </div>
+            </header>
+            <div data-slideshow-holder class="slideshow-content">
+              <button data-slideshow-prev class="btn-prev ico-chevron-left"></button>
+              <ul data-slideshow class="slideset">
+                <li>
+                  <div class="video-box">
+                    <div data-video="//www.youtube.com/embed/dM3qsA0xhls?autoplay=1" class="video-box-content">
+                      <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                    </div><a href="#" data-play-button><img src="images/content/img-slider-1.jpg" width="1112" height="444" alt="image description" class="scalable-img responsive-img"><i class="ico-play-min"></i></a>
+                  </div>
+                </li>
+                <li>
+                  <div class="video-box">
+                    <div data-video="//www.youtube.com/embed/dM3qsA0xhls?autoplay=1" class="video-box-content">
+                      <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                    </div><a href="#" data-play-button><img src="images/content/img-slider-1.jpg" width="1112" height="444" alt="image description" class="scalable-img responsive-img"><i class="ico-play-min"></i></a>
+                  </div>
+                </li>
+                <li>
+                  <div class="video-box">
+                    <div data-video="//www.youtube.com/embed/dM3qsA0xhls?autoplay=1" class="video-box-content">
+                      <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                    </div><a href="#" data-play-button><img src="images/content/img-slider-1.jpg" width="1112" height="444" alt="image description" class="scalable-img responsive-img"><i class="ico-play-min"></i></a>
+                  </div>
+                </li>
+              </ul>
+              <button data-slideshow-next class="btn-next ico-chevron-right"></button>
+            </div>
+          </article><strong class="ui-title">Slider</strong>
+          <article class="carousel">
+            <div data-carousel-holder class="carousel-content">
+              <button data-carousel-prev class="btn-prev ico-chevron-black"></button>
+              <div data-carousel-mask class="carousel-mask">
+                <ul data-carousel class="slideset">
+                  <li>
+                    <div class="product-item"><img src="images/content/img-slider-2.jpg" width="223" height="247" alt="image description" class="responsive-img">
+                      <div class="product-item-caption">
+                        <h3 class="h1 product-item-heading">MRT 260</h3>
+                        <p>The 120 AETJ C is a compact (1.2 meters wide) articulated platform with a working height of 12 meters, which is ideal for operating in narrow and restricted areas.</p>
+                      </div>
+                      <div class="grid-row">
+                        <div class="grid-col-xs-7 grid-col-lg-7"><a href="#" class="btn btn-info btn-block"><span class="is-hidden is-sm-visible">DOWNLOAD TECHNICAL DATA</span><span class="is-sm-hidden">DOWNLOAD</span></a></div>
+                        <div class="grid-col-xs-5 grid-col-lg-5"><a href="#" class="btn btn-primary btn-block">ORDER</a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="product-item"><img src="images/content/img-slider-2.jpg" width="223" height="247" alt="image description" class="responsive-img">
+                      <div class="product-item-caption">
+                        <h3 class="h1 product-item-heading">MRT 260</h3>
+                        <p>The 120 AETJ C is a compact (1.2 meters wide) articulated platform with a working height of 12 meters, which is ideal for operating in narrow and restricted areas.</p>
+                      </div>
+                      <div class="grid-row">
+                        <div class="grid-col-xs-7 grid-col-lg-7"><a href="#" class="btn btn-info btn-block"><span class="is-hidden is-sm-visible">DOWNLOAD TECHNICAL DATA</span><span class="is-sm-hidden">DOWNLOAD</span></a></div>
+                        <div class="grid-col-xs-5 grid-col-lg-5"><a href="#" class="btn btn-primary btn-block">ORDER</a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="product-item"><img src="images/content/img-slider-2.jpg" width="223" height="247" alt="image description" class="responsive-img">
+                      <div class="product-item-caption">
+                        <h3 class="h1 product-item-heading">MRT 260</h3>
+                        <p>The 120 AETJ C is a compact (1.2 meters wide) articulated platform with a working height of 12 meters, which is ideal for operating in narrow and restricted areas.</p>
+                      </div>
+                      <div class="grid-row">
+                        <div class="grid-col-xs-7 grid-col-lg-7"><a href="#" class="btn btn-info btn-block"><span class="is-hidden is-sm-visible">DOWNLOAD TECHNICAL DATA</span><span class="is-sm-hidden">DOWNLOAD</span></a></div>
+                        <div class="grid-col-xs-5 grid-col-lg-5"><a href="#" class="btn btn-primary btn-block">ORDER</a></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <button data-carousel-next class="btn-next ico-chevron-black"></button>
+            </div>
+          </article>
+          <article></article><strong class="ui-sub-title">Visual blocks</strong><strong class="ui-title">Promo</strong>
+          <article class="promo promo-access-platforms">
+            <div class="promo-content">
+              <h1 class="heading-complementary">ACCESS PLATFORMS</h1>
+              <p class="lead is-hidden is-lg-visible">An aerial work platform  elevating work platform or mobile elevating work platformis a mechanical device used to provide temporary access for people or equipment to inaccessible areas, usually at height. There are distinct types of mechanized access platforms and the individual types</p><a href="tel:+97239597700" class="h4 heading-complementary heading-block is-hidden is-lg-visible">Customer Service  +972 3 9597700</a><a href="#" class="btn btn-primary is-hidden is-lg-inline-visible">ORDER AN ACCESS PLATFORM</a>
+            </div>
+          </article><strong class="ui-title">Visual block</strong>
+          <section data-shifted-elements data-history-tabs class="visual-block-wrapper history">
+            <ul data-tab-nav class="list list-with-bullets time-line time-line-5">
+              <li class="tab-is-active"><span data-tab-link="#tab-1">1943</span></li>
+              <li><span data-tab-link="#tab-2">1945</span></li>
+              <li><span data-tab-link="#tab-3">1948</span></li>
+              <li><span data-tab-link="#tab-4">1951</span></li>
+              <li><span data-tab-link="#tab-5">1953</span></li>
+              <li><span data-tab-link="#tab-6">1956</span></li>
+              <li><span data-tab-link="#tab-7">1962</span></li>
+              <li><span data-tab-link="#tab-8">1978</span></li>
+              <li><span data-tab-link="#tab-9">1988</span></li>
+              <li><span data-tab-link="#tab-10">1995</span></li>
+              <li><span data-tab-link="#tab-11">2003</span></li>
+              <li><span data-tab-link="#tab-12">2011</span></li>
+            </ul>
+            <div class="visual-block-inner-wrapper">
+              <div class="container">
+                <header class="visual-block-header">
+                  <ul class="list list-inline list-delimited breadcrumbs-xl">
+                    <li><a href="index.html">Avi cranes</a></li>
+                    <li><a href="about-template.html"><span class="is-lg-hidden">about</span><span class="is-hidden is-lg-inline-visible">about us</span></a></li>
+                    <li>History</li>
+                  </ul>
+                  <h1 class="heading-complementary">History</h1>
+                </header>
+              </div>
+              <article id="tab-1" class="visual-block">
+                <div class="visual-block-img visual-block-history"><img src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description" class="responsive-img is-visible is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">1943</h2>
+                    <p>The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-2">1945</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-2" class="visual-block">
+                <div class="visual-block-img visual-block-history-2"><img src="images/content/img-visual-block-1-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">1945</h2>
+                    <p>The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-1">1943</span></li>
+                      <li><span data-tab-link="#tab-3">1948</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-3" class="visual-block">
+                <div class="visual-block-img visual-block-history"><img src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">1948</h2>
+                    <p>The number 1 Hefe-Weissbier in Germany and one of the world’s favourites.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-2">1945</span></li>
+                      <li><span data-tab-link="#tab-4">1951</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-4" class="visual-block">
+                <div class="visual-block-img visual-block-history-2"><img src="images/content/img-visual-block-1-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">1951</h2>
+                    <p>The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-3">1948</span></li>
+                      <li><span data-tab-link="#tab-5">1953</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-5" class="visual-block">
+                <div class="visual-block-img visual-block-history"><img src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">1953</h2>
+                    <p>The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-4">1951</span></li>
+                      <li><span data-tab-link="#tab-6">1956</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-6" class="visual-block">
+                <div class="visual-block-img visual-block-history-2"><img src="images/content/img-visual-block-1-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">1956</h2>
+                    <p>The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-5">1953</span></li>
+                      <li><span data-tab-link="#tab-7">1962</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-7" class="visual-block">
+                <div class="visual-block-img visual-block-history"><img src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">1962</h2>
+                    <p>The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-6">1956</span></li>
+                      <li><span data-tab-link="#tab-8">1978</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-8" class="visual-block">
+                <div class="visual-block-img visual-block-history-2"><img src="images/content/img-visual-block-1-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">1978</h2>
+                    <p>The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-7">1962</span></li>
+                      <li><span data-tab-link="#tab-9">1988</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-9" class="visual-block">
+                <div class="visual-block-img visual-block-history"><img src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">1988</h2>
+                    <p>The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-8">1978</span></li>
+                      <li><span data-tab-link="#tab-10">1995</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-10" class="visual-block">
+                <div class="visual-block-img visual-block-history-2"><img src="images/content/img-visual-block-1-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">1995</h2>
+                    <p>The number 1 Hefe-Weissbier in The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-9">1988</span></li>
+                      <li><span data-tab-link="#tab-11">2003</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-11" class="visual-block">
+                <div class="visual-block-img visual-block-history"><img src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">2003</h2>
+                    <p>Cloudy and shining silky gold in the glass under a really strong head of. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally  foam. At the first mouthful this Weissbier classic has a mild aroma of banana.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-10">1995</span></li>
+                      <li><span data-tab-link="#tab-12">2011</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article id="tab-12" class="visual-block">
+                <div class="visual-block-img visual-block-history"><img src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description" class="responsive-img is-xl-hidden"></div>
+                <div class="visual-block-main">
+                  <div class="visual-block-content">
+                    <h2 class="heading-auxiliary visual-block-heading">2011</h2>
+                    <p>At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam.</p>
+                    <ul class="list list-inline list-underlined visual-block-navigation">
+                      <li><span data-tab-link="#tab-11">2003</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section><strong class="ui-title">Visual block 2</strong>
+          <article data-shifted-elements class="visual-block visual-block-with-bg visual-block-vision vision">
+            <div class="container">
+              <header class="visual-block-header">
+                <ul class="list list-inline list-delimited breadcrumbs">
+                  <li><a href="index.html">Avi cranes</a></li>
+                  <li><a href="about-template.html"><span class="is-lg-hidden">about</span><span class="is-hidden is-lg-inline-visible">about us</span></a></li>
+                  <li>vision</li>
+                </ul>
+                <h1 class="heading-complementary">The vision</h1>
+              </header>
+              <div class="visual-block-img"><img src="images/content/img-visual-block-2.jpg" width="320" height="360" alt="image description" class="responsive-img scalable-img is-lg-hidden"></div>
+              <div class="visual-block-main">
+                <div class="visual-block-content">
+                  <blockquote cite="#" class="blockquote blockquote-alternative">
+                    <h2 class="accessibility">Quote of AVI</h2>
+                    <q class="quote">“Keep your dreams alive. Understand to achieve anything requires faith hard work, determination and dedication.”</q>
+                    <cite class="cite"><span class="h5 big is-highlighted">AVI JOCHANAN</span>DREAMER & FOUNDER, AVI CRANES</cite>
+                  </blockquote>
+                  <nav class="nav-secondary is-hidden is-lg-inline-visible">
+                    <h3 class="accessibility">Secondary navigation</h3>
+                    <ul class="list list-inline list-delimited-vertical">
+                      <li><a href="about-template.html">About Avi Cranes</a></li>
+                      <li><a href="about-history.html">Our History</a></li>
+                      <li><a href="about-jobs.html">Jobs at Avi Cranes</a></li>
+                      <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </article><strong class="ui-title">Visual block 3</strong>
+          <article data-shifted-elements class="visual-block visual-block-with-bg visual-block-safety">
+            <div class="container">
+              <header class="visual-block-header">
+                <ul class="list list-inline list-delimited breadcrumbs">
+                  <li><a href="index.html">Avi cranes</a></li>
+                  <li>safety</li>
+                </ul>
+                <h1 class="heading-complementary">Safety</h1>
+              </header>
+              <div class="visual-block-img"><img src="images/content/img-visual-block-3.jpg" width="320" height="211" alt="image description" class="responsive-img scalable-img is-lg-hidden"></div>
+              <div class="visual-block-main">
+                <div class="visual-block-content visual-block-content-text">
+                  <p>Moving large, heavy loads is crucial to today's manufacturing and construction industries. Much technology has been developed for these operations, including careful training and extensive workplace precautions. There are significant safety issues to be considered, both for the operators of the diverse "lifting" devices, and for workers in proximity to them. This page is a starting point for finding information about these devices, including elevators and conveyors, and their operation.</p>
+                  <p>considered, both for the operators of the diverse "lifting" devices, and for workers in proximity to them. This page is a starting point for findinginformation about these devices, including elevators and conveyors, and their operation.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div id="templates"><strong class="ui-main-title">Templates</strong><strong class="ui-sub-title">Layout</strong>
+          <div id="layout">
+            <div class="grid-row">
+              <div class="grid-col-lg-12">
+                <div class="pre">.grid-col-lg-12</div>
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-col-lg-6">
+                <div class="pre">.grid-col-lg-6</div>
+              </div>
+              <div class="grid-col-lg-6">
+                <div class="pre">.grid-col-lg-6</div>
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-col-lg-5">
+                <div class="pre">.grid-col-lg-5</div>
+              </div>
+              <div class="grid-col-lg-7">
+                <div class="pre">.grid-col-lg-7</div>
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-col-lg-4">
+                <div class="pre">.grid-col-lg-4</div>
+              </div>
+              <div class="grid-col-lg-8">
+                <div class="pre">.grid-col-lg-8</div>
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-col-lg-3">
+                <div class="pre">.grid-col-lg-3</div>
+              </div>
+              <div class="grid-col-lg-9">
+                <div class="pre">.grid-col-lg-9</div>
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-col-lg-2">
+                <div class="pre">.grid-col-lg-2</div>
+              </div>
+              <div class="grid-col-lg-10">
+                <div class="pre">.grid-col-lg-10</div>
+              </div>
+            </div>
+            <div class="grid-row">
+              <div class="grid-col-lg-1">
+                <div class="pre">.grid-col-lg-1</div>
+              </div>
+              <div class="grid-col-lg-11">
+                <div class="pre">.grid-col-lg-11</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside data-add-class-parent class="ui-sidebar"><a href="#" data-add-class class="ui-navbar-toggle"><span>Menu</span></a>
+      <div class="frame">
+        <div data-custom-scroll class="scroll-holder">
+          <h3><a href="#color-palette">Color palette</a></h3>
+          <h3><a href="#typography">Typography</a></h3>
+          <ul>
+            <li><a href="#fonts">Fonts</a></li>
+            <li><a href="#headings">Headings</a></li>
+            <li><a href="#paragraphs">Paragraphs</a></li>
+            <li><a href="#small">Small</a></li>
+            <li><a href="#blockquote">Blockquote</a></li>
+          </ul>
+          <h3><a href="#atoms">Atoms</a></h3>
+          <ul>
+            <li><a href="#logo">Logo</a></li>
+            <li><a href="#icons">Icons</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#list-elements">Lists</a></li>
+            <li><a href="#form-elements">Form elements</a></li>
+            <li><a href="#copyright">Copyright</a></li>
+          </ul>
+          <h3><a href="#molecules">Molecules</a></h3>
+          <ul>
+            <li><a href="#navigation">Navigation</a></li>
+            <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+            <li><a href="#product-thumbnail">Product thumbnail</a></li>
+            <li><a href="#tabs">Tabs</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#expanding-list">Expanding list</a></li>
+            <li><a href="#info-box">Info box</a></li>
+            <li><a href="#media">Media block</a></li>
+            <li><a href="#scroll-block">Block with scroll</a></li>
+            <li><a href="#add-info">Add info block</a></li>
+          </ul>
+          <h3><a href="#organisms">Organisms</a></h3>
+          <ul>
+            <li><a href="#header">Header</a></li>
+            <li><a href="#footer">Footer</a></li>
+          </ul>
+          <h3><a href="#templates">Templates</a></h3>
+          <ul>
+            <li><a href="#layout">Layout</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <!--ui holder ends-->
+  </div>
+  <!--wrapper ends-->
+  <!-- build:remove&nbsp-->
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+  <script src="../bower_components/hammerjs/hammer.min.js"></script>
+  <script src="../bower_components/retina.js/dist/retina.min.js"></script>
+  <script src="../bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+  <script src="../bower_components/tablesorter/jquery.tablesorter.min.js"></script>
+  <!-- /build-->
+  <!-- build:template
+  <% if (environment === 'markup') { %>
+  <script src="js/plugins/jquery.min.js"></script>
+  <script src="js/plugins/jquery.placeholder.min.js"></script>
+  <script src="js/plugins/hammer.min.js"></script>
+  <script src="js/plugins/retina.min.js"></script>
+  <script src="js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="js/plugins/jquery.tablesorter.min.js"></script>
+  <script src="js/2-jquery.tabs.js"></script>
+  <script src="js/3-jquery.slider.js"></script>
+  <script src="js/4-jquery.slideshow.js"></script>
+  <script src="js/5-jquery.validation.js"></script>
+  <script src="js/1-jquery.utilities.min.js"></script>
+  <% } %>
+  /build -->
+  <!-- build:remove:build-->
+  <!--include plugins-->
+  <script src="js/1-jquery.utilities.js"></script>
+  <script src="js/2-jquery.tabs.js"></script>
+  <script src="js/3-jquery.slider.js"></script>
+  <script src="js/4-jquery.slideshow.js"></script>
+  <script src="js/5-jquery.validation.js"></script>
+  <!--init plugins-->
+  <script src="js/jquery.init-plugins.js"></script>
+  <!-- /build-->
+  <!-- build:template
+  <% if (environment === 'build') { %>
+  <script src="js/avi-cranes.min.js"></script>
+  <% } %>
+  /build -->
+</body>
+</html>

@@ -19,7 +19,7 @@ paths.dev = {
     plgFolder: 'plugins/',
     files: '{,**/}*.js',
     ourFiles: '*.js',
-    requirePrefix: '_requirejs.'
+    browserifyFiles: '*.bundle.js'
   },
   images: {
     folder: 'images/',
@@ -35,7 +35,7 @@ paths.dev = {
   },
   jade: {
     folder: 'jade/',
-    files: '{,**/}*.jade'
+    files: '*.jade'
   }
 };
 
@@ -61,7 +61,7 @@ paths.dev.js.pathToOurFolder = paths.dev.folder + paths.dev.js.folder;
 paths.dev.js.pathToOurFiles = paths.dev.js.pathToOurFolder + paths.dev.js.ourFiles;
 
 paths.dev.js.requireFiles = paths.dev.js.requirePrefix + paths.dev.js.ourFiles;
-paths.dev.js.pathToRequireFiles = paths.dev.js.pathToFolder + paths.dev.js.requireFiles;
+paths.dev.js.pathToBrowserifyFiles = paths.dev.js.pathToFolder + paths.dev.js.browserifyFiles;
 
 // images
 paths.dev.images.pathToFolder = paths.dev.folder + paths.dev.images.folder;

@@ -1,0 +1,25 @@
+extends _modules/layout
+block title
+  - title = "About jobs"
+block body
+  - isAboutUs = true
+  - isAboutJobs = true
+  //wrapper starts
+  .wrapper(data-add-class-parent data-nav-toggle-parent)
+    include _organisms/header
+    main.content(data-shifted-elements)
+      .container
+        header.content-header
+          ul.list.list-inline.list-delimited.breadcrumbs
+            li
+              a(href="index.html") Avi cranes
+            li
+              a(href="about-template.html")
+                span.is-lg-hidden about
+                span.is-hidden.is-lg-inline-visible about us
+            li jobs
+          h1 Jobs
+        span.separator.is-hidden.is-lg-visible
+        .content-main
+          include _molecules/list-expanding
+  include _organisms/footer

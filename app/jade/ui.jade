@@ -1,11 +1,13 @@
 extends _modules/layout
+block title
+  - title = "AVI UI"
 block body
   //wrapper starts
-  #wrapper(data-add-class-parent)
+  div(data-add-class-parent).wrapper.ui-wrapper
     header.ui-header
       .ui-container
-        .logo.ui-logo Sliceart Creative &amp; Smart
-        strong.ui-header-title My Project Styleguide00
+        .logo.ui-logo AVI Cranes
+        strong.ui-header-title AVI Cranes Styleguide
     //ui holder starts
     main.ui-main
       .ui-container
@@ -17,8 +19,12 @@ block body
                 .ui-color-heading Primary Color
                 .ui-color-box-example
             .grid-col-sm-12.grid-col-lg-4
-              .ui-color-box.ui-color-primary-light
-                .ui-color-heading Primary Light Color
+              .ui-color-box.ui-color-complementary
+                .ui-color-heading Complementary Color
+                .ui-color-box-example
+            .grid-col-sm-12.grid-col-lg-4
+              .ui-color-box.ui-color-auxiliary
+                .ui-color-heading Auxiliary Color
                 .ui-color-box-example
             .grid-col-sm-12.grid-col-lg-4
               .ui-color-box.ui-color-success
@@ -37,7 +43,15 @@ block body
                 .ui-color-heading Danger Color
                 .ui-color-box-example
         #typography
-          strong.ui-main-title Typography1
+          strong.ui-main-title Typography
+          #fonts
+            strong.ui-title Fonts
+            span.ui-font.ui-font-1 Regular font
+            span.ui-font.ui-font-2 Thin font
+            span.ui-font.ui-font-3 Light font
+            span.ui-font.ui-font-4 Medium font
+            span.ui-font.ui-font-5 Bold font
+            span.ui-font.ui-font-6 Extra bold font
           #headings
             strong.ui-title Headings
             h1 Heading 1
@@ -71,16 +85,87 @@ block body
               | Heading 6
               small
                 |  Secondary Text
+            strong.ui-title Headings with modificator
+            strong.ui-sub-title Main heading
+            h1.heading-main Heading 1
+            strong.ui-sub-title Heading with border
+            h1.heading-with-border Heading 1
+            strong.ui-sub-title Underlined heading
+            .ui-block
+              h1.heading-underlined Heading 1
+            strong.ui-sub-title Complementary heading
+            h1.heading-complementary Heading 1
+            strong.ui-sub-title Auxiliary heading
+            h1.heading-auxiliary Heading 1
           #paragraphs
             strong.ui-title Paragraphs
             strong.ui-sub-title Body copy
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
             strong.ui-sub-title Lead body copy
-            p.lead
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
+            p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
+            p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
+            strong.ui-sub-title Body alternative text
+            p.alternative-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
+            strong.ui-sub-title Body alternative font
+            p.alternative-font Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
+          #small
+            strong.ui-title Small text
+            small.required Mandatory field
+          #blockquote
+            strong.ui-title Blockquote
+            blockquote(cite="#").blockquote
+              q.quote JOB THIS BIG TAKES MORE THAN JUSTLIFTING POWER
+              cite.cite Cranes Project
+            strong.ui-title Blockquote light with quotes
+            .ui-block.ui-black
+              blockquote(cite="#").blockquote.blockquote-alternative
+                q.quote “Keep your dreams alive. Understand to achieve anything requires faith hard work, determination and dedication.”
+                cite.cite
+                  span.h5.big AVI JOCHANAN
+                  |DREAMER & FOUNDER, AVI CRANES
         #atoms
           strong.ui-main-title Atoms
+          #logo
+            strong.ui-title Logos
+            strong.ui-sub-title Base logo
+            .ui-inline-block.ui-gray
+              .logo AVI Cranes
+            strong.ui-sub-title Base small logo
+            .ui-inline-block.ui-gray
+              .ico-logo-min
+            strong.ui-sub-title Alternative logo
+            .ui-inline-block.ui-gray
+              .logo-alternative AVI Cranes
+            strong.ui-sub-title Alternative small logo
+            .ui-inline-block.ui-gray
+              .ico-logo-alternative-min
+          #icons
+            strong.ui-title Icons
+            .ui-inline-block
+              i.ico-chevron-black
+            .ui-inline-block
+              i.ico-chevron-gray
+            .ui-inline-block.ui-black
+              i.ico-menu
+            .ui-inline-block.ui-black
+              i.ico-phone
+            .ui-inline-block
+              i.ico-back
+            .ui-inline-block.ui-black
+              i.ico-check
+            .ui-inline-block.ui-black
+              i.ico-chevron-left
+            .ui-inline-block.ui-black
+              i.ico-chevron-right
+            .ui-inline-block
+              i.ico-minus
+            .ui-inline-block
+              i.ico-plus
+            .ui-inline-block.ui-black
+              i.ico-play
+            .ui-inline-block.ui-black
+              i.ico-play-min
           #buttons
             strong.ui-title Buttons
             strong.ui-sub-title Button color variations
@@ -91,31 +176,860 @@ block body
             a(href="#").btn.btn-warning.btn-block Warning button
             a(href="#").btn.btn-danger.btn-block Danger button
             strong.ui-sub-title Button layout variations
-            a(href="#").btn.btn-primary Inline button
-            a(href="#").btn.btn-primary Inline button
+            .ui-inline-block
+              a(href="#").btn.btn-primary Inline button
+            .ui-inline-block
+              a(href="#").btn.btn-primary Inline button
             a(href="#").btn.btn-primary.btn-block Block button
             strong.ui-sub-title Button size variations
-            a(href="#").btn.btn-primary.btn-sm Small button
-            a(href="#").btn.btn-primary.btn-md Medium button
-            a(href="#").btn.btn-primary.btn-lg Large button
+            .ui-inline-block
+              a(href="#").btn.btn-primary.btn-lg Get an offer
+            .ui-inline-block
+              a(href="#").btn.btn-primary ORDER A LOW BED TRAILER
+            .ui-inline-block
+              a(href="#").btn.btn-primary.btn-md TECHNICAL DATA
+            .ui-inline-block
+              a(href="#").btn.btn-primary.btn-sm Small button
+            strong.ui-sub-title Buttons with decoration
+            a(href="#").btn.btn-alternative.btn-default.btn-block Alternative default button
+            a(href="#").btn.btn-alternative.btn-primary.btn-block Alternative primary button
+            a(href="#").btn.btn-alternative.btn-success.btn-block Alternative success button
+            a(href="#").btn.btn-alternative.btn-info.btn-block Alternative info button
+            a(href="#").btn.btn-alternative.btn-warning.btn-block Alternative warning button
+            a(href="#").btn.btn-alternative.btn-danger.btn-block Alternative danger button
+            a(href="#").btn.btn-primary.btn-block.btn-with-shadow With shadow
+            strong.ui-sub-title Other buttons
+            .ui-inline-block.ui-black
+              a(href="#").ico-play
+            .ui-inline-block.ui-black
+              a(href="#").ico-play
+            .ui-inline-block
+              a(href="#").ico-chevron-left
+            .ui-inline-block
+              a(href="#" ).ico-chevron-right
+            .ui-inline-block
+              a(href="#").btn.btn-link
+                i.ico-back
+                span Back To Project
+          #list-elements
+            strong.ui-title Lists
+            .grid-row
+              .grid-col-xs-12.grid-col-md-4
+                strong.ui-sub-title One column list
+                h4.list-title About us
+                ul.list.list-of-columns
+                  li About Avi Cranes
+                  li History
+                  li Jobs
+                  li Contact Us
+              .grid-col-xs-12.grid-col-md-4
+                strong.ui-sub-title Two columns list with highlighted item
+                h4.list-title heavy transport
+                ul(data-col-number="2").list.list-of-columns
+                  li About
+                  li Scissors
+                  li Boom Lifts
+                  li Vertical
+                  li Truck Mounted
+                  li For Sale
+                  li Order
+            strong.ui-sub-title List with thumbnail
+            ul.list.list-with-thumbnails.grid-row
+              li.grid-col-lg-4
+                figure.thumbnail
+                  img(src="images/content/img-thumbnail-1.jpg" alt="image description" width="180" height="155").responsive-img
+                  figcaption.thumbnail-caption ROUGH TERRAIN
+              li.grid-col-lg-4
+                figure.thumbnail
+                  img(src="images/content/img-thumbnail-2.jpg" alt="image description" width="180" height="155").responsive-img
+                  figcaption.thumbnail-caption HYDRAULIC
+              li.grid-col-lg-4
+                figure.thumbnail
+                  img(src="images/content/img-thumbnail-3.jpg" alt="image description" width="180" height="155").responsive-img
+                  figcaption.thumbnail-caption CRAWLER
+            strong.ui-sub-title Inline list
+            ul.list.list-inline
+              li Cranes
+              li Access Platforms
+              li Heavy Transport
+            strong.ui-sub-title Vertical list
+            ul.list.list-vertical
+              li 1992
+              li 1993
+              li 1994
+            strong.ui-sub-title Vertical list with points
+            ul.list.list-vertical.list-with-bullets
+              li 1992
+              li 1993
+              li 1994
+            strong.ui-sub-title Delimited inline list
+            ul.list.list-inline.list-delimited
+              li
+                a(href="#") Designed by Three Bears
+              li
+                a(href="#") Developed by Simple Idea
+            strong.ui-sub-title underlined list
+            ul.list.list-inline.list-underlined
+              li About Avi Cranes
+              li History
+              li Jobs
+              li Contact Us
           #form-elements
             strong.ui-title Form elements
             strong.ui-sub-title Input types
-            input(type="text" placeholder="Text Input").form-element
-            input(type="password" placeholder="Password input").form-element
             input(type="email" placeholder="Email input").form-element
             input(type="url" placeholder="Url input").form-element
             input(type="tel" placeholder="Tel input").form-element
             input(type="search" placeholder="Search input").form-element
-            include _atoms/checkbox
-            include _atoms/radio
-            strong.ui-sub-title Error input
-            input(type="text" placeholder="Text Input").form-element.has-error
+            strong.ui-sub-title Form groups
+            .form-group
+              label(for="ui-input-2") Default label
+              input(type="password" id="ui-input-2" placeholder="Password input").form-element
+            .form-group
+              label(for="ui-input-1").required Mandatory field
+              input(type="text" id="ui-input-1" placeholder="Text Input").form-element
             strong.ui-sub-title Textarea
             textarea(cols="30" rows="10" placeholder="Textarea").form-element
             strong.ui-sub-title Select
-            select.form-element
-              option Default select look
+            .select-holder.form-element
+              select
+                option Default select look
+                option Default select look 2
+                option Default select look 3
+            strong.ui-sub-title Checkbox
+            input.checkbox-input(type="checkbox" id="ui-checkbox-1")
+            label.checkbox-label(for="ui-checkbox-1") Electrical
+            input.checkbox-input(type="checkbox" id="ui-checkbox-2")
+            label.checkbox-label(for="ui-checkbox-2") Electrical
+            strong.ui-sub-title Radio
+            input.radio-input(type="radio" name="ui-radio-1" id="ui-radio-1")
+            label.radio-label(for="ui-radio-1") Electrical
+            input.radio-input(type="radio" name="ui-radio-1" id="ui-radio-2")
+            label.radio-label(for="ui-radio-2") Electrical
+            strong.ui-sub-title Checkbox inline
+            .checkbox-inline
+              input.checkbox-input(type="checkbox" id="ui-checkbox-3")
+              label.checkbox-label(for="ui-checkbox-3") Electrical
+            .checkbox-inline
+              input.checkbox-input(type="checkbox" id="ui-checkbox-4")
+              label.checkbox-label(for="ui-checkbox-4") Electrical
+            strong.ui-sub-title Radio inline
+            .radio-inline
+              input.radio-input(type="radio" name="ui-radio-1" id="ui-radio-3")
+              label.radio-label(for="ui-radio-3") Electrical
+            .radio-inline
+              input.radio-input(type="radio" name="ui-radio-1" id="ui-radio-4")
+              label.radio-label(for="ui-radio-4") Electrical
+          #copyright
+            strong.ui-title Copyright
+            .copyright 2015  © All Rights Reserved
+          #group-of-atoms
+            strong.ui-title Group of atoms
+            strong.ui-sub-title Logo and address
+            i.ico-logo-min-red
+            include _atoms/address
+            strong.ui-sub-title Block with shadow
+            .block-with-shadow
+              h4.list-title About us
+              ul.list.list-of-columns
+                li 4 kATZENELSON sT. 58016
+                li AZORPOB 14460
+                li TEL. +972 3 557 2222
+                li FAX +972 3 557 2222
+              h4.list-title About us
+              ul.list.list-of-columns
+                li 4 kATZENELSON sT. 58016
+                li AZOR POB 14460
+                li TEL. +972 3 557 2222
+                li FAX +972 3 557 2222
+              h4.list-title About us
+              ul.list.list-of-columns
+                li 4 kATZENELSON sT. 58016
+                li AZORPOB 14460
+                li TEL. +972 3 557 2222
+                li FAX +972 3 557 2222
+              h4.list-title About us
+              ul.list.list-of-columns
+                li 4 kATZENELSON sT. 58016
+                li AZORPOB 14460
+                li TEL. +972 3 557 2222
+                li FAX +972 3 557 2222
+        #molecules
+          strong.ui-main-title Molecules
+          #navigation
+            strong.ui-title Navigation
+            strong.ui-sub-title.is-hidden.is-lg-visible Secondary navigation
+            nav.nav-secondary.is-hidden.is-lg-inline-visible
+              h3.accessibility Secondary navigation
+              ul.list.list-inline.list-delimited-vertical
+                li
+                  a(href="about-template.html") About Avi Cranes
+                li
+                  a(href="about-history.html") Our History
+                li
+                  a(href="about-jobs.html") Jobs at Avi Cranes
+                li
+                a(href="contact-us.html") Contact Us
+            strong.ui-title Page navigation
+            nav.page-nav
+              ul.list.list-inline
+                li
+                  a(href="#") Cranes
+                li
+                  a(href="access-platforms-about.html") Access platforms
+                li
+                  a(href="#") Heavy Transport
+            strong.ui-title Full navigation
+            nav.full-nav
+              ul.list
+                li
+                  h4.list-title About us
+                  ul.list.list-of-columns
+                    li
+                      a(href="#") About Avi Cranes
+                    li
+                      a(href="#") History
+                    li
+                      a(href="#") Jobs
+                    li
+                      a(href="#") Contact Us
+                li
+                  h4.list-title Cranes Division
+                  ul.list.list-of-columns
+                    li
+                      a(href="#") About Cranes Division
+                    li
+                      a(href="#") Cranes
+                    li
+                      a(href="#") For Sale
+                    li
+                      a(href="#") Order a Crane
+                li
+                  h4.list-title heavy transport
+                  ul(data-col-number="2").list.list-of-columns
+                    li
+                      a(href="#") About
+                    li
+                      a(href="#") Truck Mounted
+                    li
+                      a(href="#") Scissors
+                    li
+                      a(href="#") For Sale
+                    li
+                      a(href="#") Boom Lifts
+                    li
+                      a(href="#") Order
+                    li
+                      a(href="#") Vertical
+                li
+                  h4.list-title Access Platforms
+                  ul(data-col-number="2").list.list-of-columns
+                    li
+                      a(href="#") About
+                    li
+                      a(href="#") Truck Mounted
+                    li
+                      a(href="#") Scissors
+                    li
+                      a(href="#") For Sale
+                    li
+                      a(href="#") Boom Lifts
+                    li
+                      a(href="#") Order
+                    li
+                      a(href="#") Vertical
+          #product-thumbnail
+            strong.ui-title Product thumbnail
+            .product-thumbnail-wrapper
+              .product-thumbnail
+                a(href="#")
+                  img(src="images/content/img-trailers-1.jpg" width="214" height="38" alt="image description").responsive-img
+                a(href="#")
+                  h2.h5.big.product-thumbnail-heading Low Bed Trailers
+                a(href="#").btn.btn-primary.btn-sm TECHNICAL DATA
+              .product-thumbnail
+                a(href="#")
+                  img(src="images/content/img-trailers-2.jpg" width="219" height="42" alt="image description").responsive-img
+                a(href="#")
+                  h2.h5.big.product-thumbnail-heading SPECIAL TRAILERS
+                a(href="#").btn.btn-primary.btn-sm TECHNICAL DATA
+              .product-thumbnail
+                a(href="#")
+                  img(src="images/content/img-trailers-3.jpg" width="86" height="29" alt="image description").responsive-img
+                a(href="#")
+                  h2.h5.big.product-thumbnail-heading MODULAR ROWS Trailers
+                a(href="#").btn.btn-primary.btn-sm TECHNICAL DATA
+              .product-thumbnail
+                a(href="#")
+                  img(src="images/content/img-trailers-4.jpg" width="229" height="46" alt="image description").responsive-img
+                a(href="#")
+                  h2.h5.big.product-thumbnail-heading OTHER MODULAR Trailers
+                a(href="#").btn.btn-primary.btn-sm TECHNICAL DATA
+          #breadcrumbs
+            strong.ui-title Breadcrumbs
+            include _molecules/breadcrumbs
+          #tabs
+            strong.ui-title Tabs
+            ul(data-tab-container).list.tabs-nav
+              li.tab.tab-is-active
+                span(data-tab-link="#tab1") Buy
+              li.tab
+                span(data-tab-link="#tab2") Rent
+            section.tabs-content
+              h5.accessibility Tabs content
+              article(id="tab1").tab-pane
+                h4.accessibility tab 1 title
+                p content 1
+              article(id="tab2").tab-pane
+                h4.accessibility tab 1 title
+                p content 2
+          #tables
+            strong.ui-title Tables
+            div(data-custom-scroll).table-responsive.is-hidden.is-sm-visible
+              table(data-table-sorting).table
+                caption.accessibility table #1
+                thead.table-head
+                  tr
+                    th.col-1 Model
+                    th Working height
+                    th Machine Weight
+                    th Horizontal Reach
+                    th Max Load
+                tbody.table-body
+                  tr
+                    td 161 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 162 atj
+                    td 7.49m
+                    td 1550kg
+                    td 35m
+                    td 234kg
+                  tr
+                    td 163 atj
+                    td 7.39m
+                    td 1551kg
+                    td 33m
+                    td 233kg
+                  tr
+                    td 164 atj
+                    td 7.29m
+                    td 1552kg
+                    td 32m
+                    td 232kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+          #expanding-list
+            strong.ui-title Expanding list
+            include _molecules/list-expanding
+          #info-box
+            strong.ui-title Info box
+            figure.info-box
+              img(src="images/content/img-box-info-1.jpg" width="428" height="618" alt="image description").responsive-img
+              figcaption.info-box-caption
+                a(href="#").btn.btn-primary ORDER A CRANE
+          #media
+            strong.ui-title Media
+            .grid-row
+              .grid-col-xs-12.grid-col-sm-6.grid-col-lg-4
+                figure.media
+                  a(href="project-page.html").media-hover
+                    span.btn.btn-md.btn-alternative.btn-complementary READ MORE
+                  img(src="images/content/img-media-1.jpg" width="344" height="226" alt="image description").responsive-img.scalable-img
+                  figcaption.media-info
+                    .media-info-content A JOB THIS BIG TAKES MORE THAN jUST LIFTING POWER
+          #scroll-block
+            strong.ui-title Block with scroll
+            div(data-custom-scroll).table-with-fixed-height.is-hidden.is-sm-visible
+              table.table
+                caption.accessibility table #1
+                thead.table-head
+                  tr
+                    th Model
+                    th.sorted-by Working height
+                    th Machine Weight
+                    th Horizontal Reach
+                    th Max Load
+                tbody.table-body
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+                  tr
+                    td 160 atj
+                    td 7.79m
+                    td 1550kg
+                    td 30m
+                    td 230kg
+          #add-info
+            strong.ui-title Add info block
+            .grid-row
+              .grid-col-xs-12.grid-col-xl-5
+                .content-sidebar.max-width
+                  aside.add-info
+                    img(src="images/content/img-content-sidebar-1.png" width="310" height="534" alt="image description").is-visibility-hidden.is-xl-visibility-visible
+                    img(src="images/content/img-content-sidebar-1-min.png" width="155" height="267" alt="image description").is-visibility-visible.is-xl-visibility-hidden
+                    .add-info-body
+                      h2.title Customer Service
+                      span.h4.sub-title +972 3 959 7733
+                      p We will be happy to help you choose the right model for your need and place an easy order
+                    footer.add-info-footer
+                      small BY LAW, AN ACCES PLATFORM OPERATOR MUST Practice for Working Safely at Heights.LEARN ABOUT OUR SAFETY CENTER
+              .grid-col-xs-12.grid-col-xl-6
+                aside.add-info.add-info-secondary
+                  img(src="images/content/img-content-sidebar-2.jpg" width="220" height="625" alt="image description").is-visibility-hidden.is-xl-visibility-visible
+                  img(src="images/content/img-content-sidebar-2-min.jpg" width="110" height="312" alt="image description").is-visibility-visible.is-xl-visibility-hidden
+                  .item-table
+                    .item-cell
+                      .add-info-body
+                        h2.title Customer Service
+                        h3.h4.sub-title +972 3 959 7733
+                        p We will be happy to help you choose the right model for your need and place an easy order
+        #organisms(data-nav-toggle-parent).ui-organisms
+          span.overlay(data-overlay)
+          strong.ui-main-title Organisms
+          strong.ui-sub-title Header
+          .scroll-holder.responsive-xl
+            #ui-header.ui-organism-header
+              include _organisms/header
+          strong.ui-sub-title Footer
+          .scroll-holder
+            #ui-footer-item.ui-footer-item
+              include _organisms/footer
+          strong.ui-sub-title Galleries
+          strong.ui-title Slideshow
+          article.slideshow
+            header.slideshow-header
+              .item-table
+                .item-cell
+                  a(href="#").btn-link-back
+                    i.ico-back
+                    span Back To Project
+            div(data-slideshow-holder).slideshow-content
+              button(data-slideshow-prev).btn-prev.ico-chevron-left
+              ul.slideset(data-slideshow)
+                li
+                  .video-box
+                    div(data-video="//www.youtube.com/embed/dM3qsA0xhls?autoplay=1").video-box-content
+                      iframe(width="560" height="315" frameborder="0" allowfullscreen)
+                    a(href="#" data-play-button)
+                      img(src="images/content/img-slider-1.jpg" width="1112" height="444" alt="image description").scalable-img.responsive-img
+                      i.ico-play-min
+                li
+                  .video-box
+                    div(data-video="//www.youtube.com/embed/dM3qsA0xhls?autoplay=1").video-box-content
+                      iframe(width="560" height="315" frameborder="0" allowfullscreen)
+                    a(href="#" data-play-button)
+                      img(src="images/content/img-slider-1.jpg" width="1112" height="444" alt="image description").scalable-img.responsive-img
+                      i.ico-play-min
+                li
+                  .video-box
+                    div(data-video="//www.youtube.com/embed/dM3qsA0xhls?autoplay=1").video-box-content
+                      iframe(width="560" height="315" frameborder="0" allowfullscreen)
+                    a(href="#" data-play-button)
+                      img(src="images/content/img-slider-1.jpg" width="1112" height="444" alt="image description").scalable-img.responsive-img
+                      i.ico-play-min
+              button(data-slideshow-next).btn-next.ico-chevron-right
+          strong.ui-title Slider
+          article.carousel
+            div(data-carousel-holder).carousel-content
+              button(data-carousel-prev).btn-prev.ico-chevron-black
+              div(data-carousel-mask).carousel-mask
+                ul(data-carousel).slideset
+                  li
+                    .product-item
+                      img(src="images/content/img-slider-2.jpg" width="223" height="247" alt="image description").responsive-img
+                      .product-item-caption
+                        h3.h1.product-item-heading MRT 260
+                        p The 120 AETJ C is a compact (1.2 meters wide) articulated platform with a working height of 12 meters, which is ideal for operating in narrow and restricted areas.
+                      .grid-row
+                        .grid-col-xs-7.grid-col-lg-7
+                          a(href="#").btn.btn-info.btn-block
+                              span.is-hidden.is-sm-visible DOWNLOAD TECHNICAL DATA
+                              span.is-sm-hidden DOWNLOAD
+                        .grid-col-xs-5.grid-col-lg-5
+                          a(href="#").btn.btn-primary.btn-block ORDER
+                  li
+                    .product-item
+                      img(src="images/content/img-slider-2.jpg" width="223" height="247" alt="image description").responsive-img
+                      .product-item-caption
+                        h3.h1.product-item-heading MRT 260
+                        p The 120 AETJ C is a compact (1.2 meters wide) articulated platform with a working height of 12 meters, which is ideal for operating in narrow and restricted areas.
+                      .grid-row
+                        .grid-col-xs-7.grid-col-lg-7
+                          a(href="#").btn.btn-info.btn-block
+                              span.is-hidden.is-sm-visible DOWNLOAD TECHNICAL DATA
+                              span.is-sm-hidden DOWNLOAD
+                        .grid-col-xs-5.grid-col-lg-5
+                          a(href="#").btn.btn-primary.btn-block ORDER
+                  li
+                    .product-item
+                      img(src="images/content/img-slider-2.jpg" width="223" height="247" alt="image description").responsive-img
+                      .product-item-caption
+                        h3.h1.product-item-heading MRT 260
+                        p The 120 AETJ C is a compact (1.2 meters wide) articulated platform with a working height of 12 meters, which is ideal for operating in narrow and restricted areas.
+                      .grid-row
+                        .grid-col-xs-7.grid-col-lg-7
+                          a(href="#").btn.btn-info.btn-block
+                              span.is-hidden.is-sm-visible DOWNLOAD TECHNICAL DATA
+                              span.is-sm-hidden DOWNLOAD
+                        .grid-col-xs-5.grid-col-lg-5
+                          a(href="#").btn.btn-primary.btn-block ORDER
+              button(data-carousel-next).btn-next.ico-chevron-black
+          article
+          strong.ui-sub-title Visual blocks
+          strong.ui-title Promo
+          article.promo.promo-access-platforms
+            .promo-content
+              h1.heading-complementary ACCESS PLATFORMS
+              p.lead.is-hidden.is-lg-visible An aerial work platform  elevating work platform or mobile elevating work platformis a mechanical device used to provide temporary access for people or equipment to inaccessible areas, usually at height. There are distinct types of mechanized access platforms and the individual types
+              a(href="tel:+97239597700").h4.heading-complementary.heading-block.is-hidden.is-lg-visible Customer Service  +972 3 9597700
+              a(href="#").btn.btn-primary.is-hidden.is-lg-inline-visible ORDER AN ACCESS PLATFORM
+          strong.ui-title Visual block
+          section(data-shifted-elements data-history-tabs).visual-block-wrapper.history
+            ul.list.list-with-bullets.time-line.time-line-5(data-tab-nav)
+              li.tab-is-active
+                span(data-tab-link="#tab-1") 1943
+              li
+                span(data-tab-link="#tab-2") 1945
+              li
+                span(data-tab-link="#tab-3") 1948
+              li
+                span(data-tab-link="#tab-4") 1951
+              li
+                span(data-tab-link="#tab-5") 1953
+              li
+                span(data-tab-link="#tab-6") 1956
+              li
+                span(data-tab-link="#tab-7") 1962
+              li
+                span(data-tab-link="#tab-8") 1978
+              li
+                span(data-tab-link="#tab-9") 1988
+              li
+                span(data-tab-link="#tab-10") 1995
+              li
+                span(data-tab-link="#tab-11") 2003
+              li
+                span(data-tab-link="#tab-12") 2011
+            .visual-block-inner-wrapper
+              .container
+                header.visual-block-header
+                  ul.list.list-inline.list-delimited.breadcrumbs-xl
+                    li
+                      a(href="index.html") Avi cranes
+                    li
+                      a(href="about-template.html")
+                        span.is-lg-hidden about
+                        span.is-hidden.is-lg-inline-visible about us
+                    li History
+                  h1.heading-complementary History
+              article(id="tab-1").visual-block
+                .visual-block-img.visual-block-history
+                  img(src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description").responsive-img.is-visible.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 1943
+                    p The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-2") 1945
+              article(id="tab-2").visual-block
+                .visual-block-img.visual-block-history-2
+                  img(src="images/content/img-visual-block-1-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 1945
+                    p The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-1") 1943
+                      li
+                        span(data-tab-link="#tab-3") 1948
+              article(id="tab-3").visual-block
+                .visual-block-img.visual-block-history
+                  img(src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 1948
+                    p The number 1 Hefe-Weissbier in Germany and one of the world’s favourites.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-2") 1945
+                      li
+                        span(data-tab-link="#tab-4") 1951
+              article(id="tab-4").visual-block
+                .visual-block-img.visual-block-history-2
+                  img(src="images/content/img-visual-block-1-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 1951
+                    p The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-3") 1948
+                      li
+                        span(data-tab-link="#tab-5") 1953
+              article(id="tab-5").visual-block
+                .visual-block-img.visual-block-history
+                  img(src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 1953
+                    p The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-4") 1951
+                      li
+                        span(data-tab-link="#tab-6") 1956
+              article(id="tab-6").visual-block
+                .visual-block-img.visual-block-history-2
+                  img(src="images/content/img-visual-block-1-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 1956
+                    p The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-5") 1953
+                      li
+                        span(data-tab-link="#tab-7") 1962
+              article(id="tab-7").visual-block
+                .visual-block-img.visual-block-history
+                  img(src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 1962
+                    p The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-6") 1956
+                      li
+                        span(data-tab-link="#tab-8") 1978
+              article(id="tab-8").visual-block
+                .visual-block-img.visual-block-history-2
+                  img(src="images/content/img-visual-block-1-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 1978
+                    p The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-7") 1962
+                      li
+                        span(data-tab-link="#tab-9") 1988
+              article(id="tab-9").visual-block
+                .visual-block-img.visual-block-history
+                  img(src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 1988
+                    p The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-8") 1978
+                      li
+                        span(data-tab-link="#tab-10") 1995
+              article(id="tab-10").visual-block
+                .visual-block-img.visual-block-history-2
+                  img(src="images/content/img-visual-block-1-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 1995
+                    p The number 1 Hefe-Weissbier in The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana. head of foam. At the first mouthful this Weissbier classic has a mild aroma of banana.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-9") 1988
+                      li
+                        span(data-tab-link="#tab-11") 2003
+              article(id="tab-11").visual-block
+                .visual-block-img.visual-block-history
+                  img(src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 2003
+                    p Cloudy and shining silky gold in the glass under a really strong head of. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally  foam. At the first mouthful this Weissbier classic has a mild aroma of banana.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-10") 1995
+                      li
+                        span(data-tab-link="#tab-12") 2011
+              article(id="tab-12").visual-block
+                .visual-block-img.visual-block-history
+                  img(src="images/content/img-visual-block-1.png" width="320" height="320" alt="image description").responsive-img.is-xl-hidden
+                .visual-block-main
+                  .visual-block-content
+                    h2.heading-auxiliary.visual-block-heading 2011
+                    p At the first mouthful this Weissbier classic has a mild aroma of banana. The number 1 Hefe-Weissbier in Germany and one of the world’s favourites. Naturally cloudy and shining silky gold in the glass under a really strong head of foam.
+                    ul.list.list-inline.list-underlined.visual-block-navigation
+                      li
+                        span(data-tab-link="#tab-11") 2003
+          strong.ui-title Visual block 2
+          article(data-shifted-elements).visual-block.visual-block-with-bg.visual-block-vision.vision
+            .container
+              header.visual-block-header
+                ul.list.list-inline.list-delimited.breadcrumbs
+                  li
+                    a(href="index.html") Avi cranes
+                  li
+                    a(href="about-template.html")
+                      span.is-lg-hidden about
+                      span.is-hidden.is-lg-inline-visible about us
+                  li vision
+                h1.heading-complementary The vision
+              .visual-block-img
+                img(src="images/content/img-visual-block-2.jpg" width="320" height="360" alt="image description").responsive-img.scalable-img.is-lg-hidden
+              .visual-block-main
+                .visual-block-content
+                  blockquote(cite="#").blockquote.blockquote-alternative
+                    h2.accessibility Quote of AVI
+                    q.quote “Keep your dreams alive. Understand to achieve anything requires faith hard work, determination and dedication.”
+                    cite.cite
+                      span.h5.big.is-highlighted AVI JOCHANAN
+                      | DREAMER & FOUNDER, AVI CRANES
+                  nav.nav-secondary.is-hidden.is-lg-inline-visible
+                    h3.accessibility Secondary navigation
+                    ul.list.list-inline.list-delimited-vertical
+                      li
+                        a(href="about-template.html") About Avi Cranes
+                      li
+                        a(href="about-history.html") Our History
+                      li
+                        a(href="about-jobs.html") Jobs at Avi Cranes
+                      li
+                        a(href="contact-us.html") Contact Us
+          strong.ui-title Visual block 3
+          article(data-shifted-elements).visual-block.visual-block-with-bg.visual-block-safety
+            .container
+              header.visual-block-header
+                ul.list.list-inline.list-delimited.breadcrumbs
+                  li
+                    a(href="index.html") Avi cranes
+                  li safety
+                h1.heading-complementary Safety
+              .visual-block-img
+                img(src="images/content/img-visual-block-3.jpg" width="320" height="211" alt="image description").responsive-img.scalable-img.is-lg-hidden
+              .visual-block-main
+                .visual-block-content.visual-block-content-text
+                  p Moving large, heavy loads is crucial to today's manufacturing and construction industries. Much technology has been developed for these operations, including careful training and extensive workplace precautions. There are significant safety issues to be considered, both for the operators of the diverse "lifting" devices, and for workers in proximity to them. This page is a starting point for finding information about these devices, including elevators and conveyors, and their operation.
+                  p considered, both for the operators of the diverse "lifting" devices, and for workers in proximity to them. This page is a starting point for findinginformation about these devices, including elevators and conveyors, and their operation.
         #templates
           strong.ui-main-title Templates
           strong.ui-sub-title Layout
@@ -153,52 +1067,75 @@ block body
                 .pre .grid-col-lg-1
               .grid-col-lg-11
                 .pre .grid-col-lg-11
-    aside.ui-sidebar
-      button.btn.btn-default.btn-sidebar-toggle.is-xl-hidden(data-add-class)
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
+    aside(data-add-class-parent).ui-sidebar
+      a(href="#" data-add-class).ui-navbar-toggle
+        span Menu
       .frame
-        .scroll-holder
+        .scroll-holder(data-custom-scroll)
           h3
-            a(href="#color-palette") Color Palette
+            a(href="#color-palette") Color palette
           h3
             a(href="#typography") Typography
           ul
             li
+              a(href="#fonts") Fonts
+            li
               a(href="#headings") Headings
             li
               a(href="#paragraphs") Paragraphs
+            li
+              a(href="#small") Small
+            li
+              a(href="#blockquote") Blockquote
           h3
             a(href="#atoms") Atoms
           ul
             li
-              a(href="#buttons") Buttons
-            li
-              a(href="#form-elements") Form elements
+              a(href="#logo") Logo
             li
               a(href="#icons") Icons
             li
-              a(href="#logo") Logo
+              a(href="#buttons") Buttons
+            li
+              a(href="#list-elements") Lists
+            li
+              a(href="#form-elements") Form elements
+            li
+              a(href="#copyright") Copyright
           h3
             a(href="#molecules") Molecules
           ul
             li
-              a(href="#block") Block
+              a(href="#navigation") Navigation
+            li
+              a(href="#breadcrumbs") Breadcrumbs
+            li
+              a(href="#product-thumbnail") Product thumbnail
+            li
+              a(href="#tabs") Tabs
+            li
+              a(href="#tables") Tables
+            li
+              a(href="#expanding-list") Expanding list
+            li
+              a(href="#info-box") Info box
+            li
+              a(href="#media") Media block
+            li
+              a(href="#scroll-block") Block with scroll
+            li
+              a(href="#add-info") Add info block
           h3
             a(href="#organisms") Organisms
           ul
             li
-              a(href="#tabs") Tabs
+              a(href="#header") Header
+            li
+              a(href="#footer") Footer
           h3
             a(href="#templates") Templates
           ul
             li
               a(href="#layout") Layout
-          h3
-            a(href="#pages") Pages
-          ul
-            li
-              a(href="#example-page") Example page
     //ui holder ends
   //wrapper ends

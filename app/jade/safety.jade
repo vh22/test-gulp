@@ -1,0 +1,23 @@
+extends _modules/layout
+block title
+  - title = "Safety"
+block body
+  - isSafety = true
+  //wrapper starts
+  .wrapper.is-black(data-add-class-parent data-nav-toggle-parent)
+    include _organisms/header
+    article(data-shifted-elements).visual-block.visual-block-with-bg.visual-block-safety
+      .container
+        header.visual-block-header
+          ul.list.list-inline.list-delimited.breadcrumbs
+            li
+              a(href="index.html") Avi cranes
+            li safety
+          h1.heading-complementary Safety
+        .visual-block-img
+          img(src="images/content/img-visual-block-3.jpg" width="320" height="211" alt="image description").responsive-img.scalable-img.is-lg-hidden
+        .visual-block-main
+          .visual-block-content.visual-block-content-text
+            p Moving large, heavy loads is crucial to today's manufacturing and construction industries. Much technology has been developed for these operations, including careful training and extensive workplace precautions. There are significant safety issues to be considered, both for the operators of the diverse "lifting" devices, and for workers in proximity to them. This page is a starting point for finding information about these devices, including elevators and conveyors, and their operation.
+            p considered, both for the operators of the diverse "lifting" devices, and for workers in proximity to them. This page is a starting point for findinginformation about these devices, including elevators and conveyors, and their operation.
+  include _organisms/footer

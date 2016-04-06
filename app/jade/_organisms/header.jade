@@ -1,0 +1,11 @@
+.header-wrapper(data-shifted-elements)
+  span.overlay(data-overlay)
+  header#header.header-main
+    .header-main-mobile.is-xxl-hidden
+      a(href="#" data-nav-toggle).header-btn-mobile.align-left
+        i.ico-menu
+      a(href="index.html").logo.is-cover AVI Cranes
+      a(href="#").header-btn-mobile.align-right
+        i.ico-phone
+    .container
+      include ../_molecules/main-nav

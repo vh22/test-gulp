@@ -1,3 +1,11 @@
-mixin button
-  button.btn&attributes(attributes)
-    block
+mixin button(args)
+  case args.tag
+    when "button"
+      button&attributes(args.attrs).btn
+        block
+    default
+      a&attributes(
+        {"href": args.href ? "#{args.href}" : "#"},
+        args.attrs
+      ).btn
+        block
