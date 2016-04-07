@@ -6,23 +6,26 @@
 // --------------------------------------------------
 
 // General components
-@import "utilities/index";
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/scaffolding";
+@import "utilities/auxiliary";
 @import "layout";
 @import "typography";
 
 // Modules
 
 // Atoms
-@import "atoms/index";
+@import "atoms/*.scss";
 
 // Molecules
-@import "molecules/index";
+@import "molecules/*.scss";
 
 // Organisms
-@import "organisms/index";
+@import "organisms/*.scss";
 
 // Templates
-@import "templates/index";
+//@import "templates/*.scss";
 
 // UI styles for styleguide presentation
 @import "ui";

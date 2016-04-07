@@ -23,6 +23,14 @@ module.exports = function(options) {
 
                 function sprite(folder, options) {
                     var spriteData = gulp.src(path.join(folder, '*.png'))
+                        .pipe($.plumber({
+                            errorHandler: $.notify.onError(function (err) {
+                                return {
+                                    title: 'Sprite error',
+                                    message: err.message
+                                };
+                            })
+                        }))
                         .pipe($.spritesmith({
                             retinaSrcFilter: [path.join(folder, '*@2x.png')],
                             retinaImgName: [options.imgPrefix || 'sprite-'] + currentFolder + '@2x.png',

@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var paths = require('./sliceart_modules/paths.js');
 var autoprefixer = require('autoprefixer');
-var stylelint = require("stylelint");
+// var stylelint = require('stylelint');
 
 // service function
 function lazyRequireTask(taskName, path, options) {
@@ -16,9 +16,25 @@ function lazyRequireTask(taskName, path, options) {
     });
 }
 
+
 //////////////////////////////////////////////////
 // #TASKS
 //////////////////////////////////////////////////
+
+//
+// #helpers
+//------------------------
+lazyRequireTask('serve', './tasks/serve', {
+    src: paths.dev.folder,
+    notify: false,
+    startPage: 'ui.html'
+});
+lazyRequireTask('deploy', './tasks/deploy');
+gulp.task('setWatch', function(cb) {
+    global.isWatching = true;
+    cb();
+});
+
 
 //
 // #html
@@ -30,10 +46,7 @@ lazyRequireTask('dev:clean:templates', './tasks/clean', {
 });
 lazyRequireTask('dev:templates:assembly', './tasks/html/templates-assembly');
 // main development html task
-gulp.task('dev:templates', gulp.series(
-    'dev:clean:templates',
-    gulp.parallel('dev:templates:assembly')
-));
+gulp.task('dev:templates', gulp.parallel('setWatch', 'dev:templates:assembly'));
 
 
 //
@@ -75,12 +88,10 @@ gulp.task('build:styles', gulp.series(
 //------------------------
 
 // tasks for development js
-lazyRequireTask('dev:js', './tasks/js/js-assembly', {
-    src: paths.dev.js.pathToMainFiles,
-    settings: {
-        debug: true
-    }
-});
+lazyRequireTask('dev:js:assembly', './tasks/js/js-assembly');
+lazyRequireTask('dev:js:hint', './tasks/js/js-hint');
+// main development js task
+gulp.task('dev:js', gulp.parallel('dev:js:assembly', 'dev:js:hint'));
 
 
 //
@@ -105,15 +116,6 @@ lazyRequireTask('img:sprite', './tasks/images/img-sprite');
 //------------------------------------------------------
 lazyRequireTask('dev:img:min', './tasks/images/img-min');
 
-
-//
-// #other
-//------------------------
-lazyRequireTask('serve', './tasks/serve', {
-    src: paths.dev.folder,
-    notify: false,
-    startPage: 'ui.html'
-});
 
 // lazyRequireTask('beautify', './tasks/beautify', {
 //     src: paths.dev.sass.pathToFiles,

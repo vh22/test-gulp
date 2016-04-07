@@ -1,4 +1,4 @@
-var appName = 'test-gulp-babel';
+var appName = 'test-gulp';
 
 var host = {
   name: 'sliceart.ftp.ukraine.com.ua',

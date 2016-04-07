@@ -18,21 +18,10 @@ $back-offset-x: 0px;
 $back-offset-y: 0px;
 $back-width: 19px;
 $back-height: 15px;
-$back-total-width: 28px;
+$back-total-width: 19px;
 $back-total-height: 15px;
 $back-image: 'sprite-ico-first.png';
-$back: (0px, 0px, 0px, 0px, 19px, 15px, 28px, 15px, 'sprite-ico-first.png', 'back', );
-$check-name: 'check';
-$check-x: 19px;
-$check-y: 0px;
-$check-offset-x: -19px;
-$check-offset-y: 0px;
-$check-width: 9px;
-$check-height: 9px;
-$check-total-width: 28px;
-$check-total-height: 15px;
-$check-image: 'sprite-ico-first.png';
-$check: (19px, 0px, -19px, 0px, 9px, 9px, 28px, 15px, 'sprite-ico-first.png', 'check', );
+$back: (0px, 0px, 0px, 0px, 19px, 15px, 19px, 15px, 'sprite-ico-first.png', 'back', );
 $back-2x-name: 'back@2x';
 $back-2x-x: 0px;
 $back-2x-y: 0px;
@@ -40,31 +29,20 @@ $back-2x-offset-x: 0px;
 $back-2x-offset-y: 0px;
 $back-2x-width: 38px;
 $back-2x-height: 30px;
-$back-2x-total-width: 56px;
+$back-2x-total-width: 38px;
 $back-2x-total-height: 30px;
 $back-2x-image: 'sprite-ico-first@2x.png';
-$back-2x: (0px, 0px, 0px, 0px, 38px, 30px, 56px, 30px, 'sprite-ico-first@2x.png', 'back@2x', );
-$check-2x-name: 'check@2x';
-$check-2x-x: 38px;
-$check-2x-y: 0px;
-$check-2x-offset-x: -38px;
-$check-2x-offset-y: 0px;
-$check-2x-width: 18px;
-$check-2x-height: 18px;
-$check-2x-total-width: 56px;
-$check-2x-total-height: 30px;
-$check-2x-image: 'sprite-ico-first@2x.png';
-$check-2x: (38px, 0px, -38px, 0px, 18px, 18px, 56px, 30px, 'sprite-ico-first@2x.png', 'check@2x', );
-$spritesheet-width: 28px;
+$back-2x: (0px, 0px, 0px, 0px, 38px, 30px, 38px, 30px, 'sprite-ico-first@2x.png', 'back@2x', );
+$spritesheet-width: 19px;
 $spritesheet-height: 15px;
 $spritesheet-image: 'sprite-ico-first.png';
-$spritesheet-sprites: ($back, $check, );
-$spritesheet: (28px, 15px, 'sprite-ico-first.png', $spritesheet-sprites, );
-$retina-spritesheet-width: 56px;
+$spritesheet-sprites: ($back, );
+$spritesheet: (19px, 15px, 'sprite-ico-first.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 38px;
 $retina-spritesheet-height: 30px;
 $retina-spritesheet-image: 'sprite-ico-first@2x.png';
-$retina-spritesheet-sprites: ($back-2x, $check-2x, );
-$retina-spritesheet: (56px, 30px, 'sprite-ico-first@2x.png', $retina-spritesheet-sprites, );
+$retina-spritesheet-sprites: ($back-2x, );
+$retina-spritesheet: (38px, 30px, 'sprite-ico-first@2x.png', $retina-spritesheet-sprites, );
 
 /*
 These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
@@ -73,9 +51,7 @@ The list formatted variables are intended for mixins like `retina-sprite` and `r
 */
 $back-group-name: 'back';
 $back-group: ('back', $back, $back-2x, );
-$check-group-name: 'check';
-$check-group: ('check', $check, $check-2x, );
-$retina-groups: ($back-group, $check-group, );
+$retina-groups: ($back-group, );
 
 /*
 The provided mixins are intended to be used with the array-like variables

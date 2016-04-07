@@ -1,6 +1,6 @@
 var ftppass = {
-  username: 'username',
-  password: 'password'
+  username: 'sliceart_ftp',
+  password: 't0h97na9'
 };
 
 module.exports = ftppass;

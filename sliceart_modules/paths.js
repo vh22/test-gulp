@@ -23,7 +23,8 @@ paths.dev = {
   },
   images: {
     folder: 'images/',
-    files: '{,**/}*.{gif,jpeg,jpg,png,svg,ico}'
+    files: '**/*.{gif,jpeg,jpg,png,svg,ico}',
+    spriteFiles: 'ico-**/*.png'
   },
   fonts: {
     folder: 'fonts/',
@@ -35,7 +36,7 @@ paths.dev = {
   },
   jade: {
     folder: 'jade/',
-    files: '*.jade'
+    files: '**/*.jade'
   }
 };
 
@@ -60,12 +61,12 @@ paths.dev.js.pathToPlgFolder = paths.dev.js.pathToFolder + paths.dev.js.plgFolde
 paths.dev.js.pathToOurFolder = paths.dev.folder + paths.dev.js.folder;
 paths.dev.js.pathToOurFiles = paths.dev.js.pathToOurFolder + paths.dev.js.ourFiles;
 
-paths.dev.js.requireFiles = paths.dev.js.requirePrefix + paths.dev.js.ourFiles;
 paths.dev.js.pathToBrowserifyFiles = paths.dev.js.pathToFolder + paths.dev.js.browserifyFiles;
 
 // images
 paths.dev.images.pathToFolder = paths.dev.folder + paths.dev.images.folder;
 paths.dev.images.pathToFiles = paths.dev.images.pathToFolder + paths.dev.images.files;
+paths.dev.images.pathToSpriteFiles = paths.dev.images.pathToFolder + paths.dev.images.spriteFiles;
 
 // fonts
 paths.dev.fonts.pathToFolder = paths.dev.folder + paths.dev.fonts.folder;
@@ -132,6 +133,7 @@ paths.markup.fonts.pathToFiles = paths.markup.fonts.pathToFolder + paths.markup.
 
 paths.build = {
   folder: 'build/',
+  allFiles: '**',
   css: {
     folder: 'css/',
     files: '{,**/}*.css'
@@ -157,6 +159,8 @@ paths.build = {
     files: '{,**/}*.html'
   }
 };
+
+paths.build.pathToAllFiles = paths.build.folder + paths.build.allFiles;
 
 // css
 paths.build.css.pathToFolder = paths.build.folder + paths.build.css.folder;

@@ -26,41 +26,5 @@ head
   +ieTpl
 body
   block body
-  // build:remove&nbsp
-  block bowerScripts
-    script(src="../bower_components/jquery/dist/jquery.min.js")
-    script(src="../bower_components/jquery-placeholder/jquery.placeholder.js")
-    script(src="../bower_components/hammerjs/hammer.min.js")
-    script(src="../bower_components/retina.js/dist/retina.min.js")
-    script(src="../bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.js")
-    script(src="../bower_components/tablesorter/jquery.tablesorter.min.js")
-  // /build
-  +replaceTpl('markup')
-    block markupScripts
-      script(src="js/plugins/jquery.min.js")
-      script(src="js/plugins/jquery.placeholder.min.js")
-      script(src="js/plugins/hammer.min.js")
-      script(src="js/plugins/retina.min.js")
-      script(src="js/plugins/perfect-scrollbar.jquery.min.js")
-      script(src="js/plugins/jquery.tablesorter.min.js")
-      script(src="js/2-jquery.tabs.js")
-      script(src="js/3-jquery.slider.js")
-      script(src="js/4-jquery.slideshow.js")
-      script(src="js/5-jquery.validation.js")
-      script(src="js/1-jquery.utilities.min.js")
-  // build:remove:build
-  //include plugins
-  block pluginsScripts
-    script(src="js/1-jquery.utilities.js")
-    script(src="js/2-jquery.tabs.js")
-    script(src="js/3-jquery.slider.js")
-    script(src="js/4-jquery.slideshow.js")
-    script(src="js/5-jquery.validation.js")
-
-  //init plugins
-  block initScripts
-    script(src="js/jquery.init-plugins.js")
-  // /build
-  +replaceTpl('build')
-    script(src="js/avi-cranes.min.js")
+  script(src="js/app.bundle.js")
 != "\n\r</html>"
