@@ -3,6 +3,7 @@
 var $ = require('gulp-load-plugins')();
 var paths = require('../../sliceart_modules/paths.js');
 var gulp = require('gulp');
+// var syntax_scss = require('postcss-scss');
 
 module.exports = function (options) {
 
@@ -13,15 +14,16 @@ module.exports = function (options) {
             .pipe($.plumber({
                 errorHandler: $.notify.onError(function (err) {
                     return {
-                        title: 'Styles',
+                        title: 'Styles assembly',
                         message: err.message
                     };
                 })
             }))
             .pipe($.if(!isProduction, $.sourcemaps.init()))
             .pipe($.sassGlob())
+            // .pipe($.postcss(options.linter || [], options.syntax || {syntax: syntax_scss}))
             .pipe($.sass())
-            .pipe($.postcss(options.processors))
+            .pipe($.postcss(options.postProcessors || []))
             .pipe($.if(isProduction, $.csso()))
             .pipe($.if(!isProduction, $.sourcemaps.write()))
             .pipe(gulp.dest(options.dest || paths.dev.css.pathToFolder));

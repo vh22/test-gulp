@@ -13,8 +13,7 @@ var paths = require('../../sliceart_modules/paths.js');
 module.exports = function (options) {
 
     var isProduction = options.isProduction || false,
-        settings = options.settings || {},
-        opts = assign({}, watchify.args, settings),
+        browserifyWatchifySettings = assign(options.browserifySettings || {}, watchify.args),
         bundleExtName = options.extname || '.bundle.js';
 
     return function (done) {
@@ -25,7 +24,7 @@ module.exports = function (options) {
             }
 
             files.map(function (entry) {
-                var currentOpts = assign({}, opts, {entries: [entry], plugin: [watchify]}),
+                var currentOpts = assign(browserifyWatchifySettings, {entries: [entry], plugin: [watchify]}),
                     b = browserify(currentOpts);
 
                 function bundle(entry) {
@@ -43,6 +42,7 @@ module.exports = function (options) {
                             gulp.dest(options.dest || './')));
                 }
                 b.on('update', function () {
+                    console.log('rebundle');
                     return bundle(entry);
                 });
                 b.on('log', function () {

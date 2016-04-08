@@ -11,7 +11,7 @@ module.exports = function(options) {
             .pipe($.plumber({
                 errorHandler: $.notify.onError(function (err) {
                     return {
-                        title: 'jade',
+                        title: 'jade compile error',
                         message: err.message
                     };
                 })

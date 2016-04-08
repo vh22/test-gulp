@@ -1,31 +1,39 @@
-//
-// Global imports
-// --------------------------------------------------
+* {
+  color: red;
+}
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
 
-// Internal imports
-// --------------------------------------------------
+  &:after {
+    clear: both;
+  }
+}
 
-// General components
-@import "utilities/variables";
-@import "utilities/mixins";
-@import "utilities/scaffolding";
-@import "utilities/auxiliary";
-@import "layout";
-@import "typography";
+.class {
+  padding: 10px;
+  @include clearfix();
+}
 
-// Modules
+.base {
+  color: red;
+}
 
-// Atoms
-@import "atoms/*.scss";
+// placeholder
 
-// Molecules
-@import "molecules/*.scss";
+%base {
 
-// Organisms
-@import "organisms/*.scss";
+  padding: 12px
+}
 
-// Templates
-//@import "templates/*.scss";
+.foo {
+  @extend .base;
+}
 
-// UI styles for styleguide presentation
-@import "ui";
+.bar {
+  @extend %base;
+
+}

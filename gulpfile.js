@@ -3,7 +3,8 @@
 var gulp = require('gulp');
 var paths = require('./sliceart_modules/paths.js');
 var autoprefixer = require('autoprefixer');
-// var stylelint = require('stylelint');
+var reporter    = require('postcss-reporter');
+var stylelint = require('stylelint');
 
 // service function
 function lazyRequireTask(taskName, path, options) {
@@ -41,12 +42,27 @@ gulp.task('setWatch', function(cb) {
 //------------------------------------------------------------------------------------------------
 
 // tasks for development html
-lazyRequireTask('dev:clean:templates', './tasks/clean', {
-    dest: paths.dev.html.pathToFiles
-});
+// tasks for #templates-assembly
+// @configs ---------------------------------------------------------------------------------
+// isProduction:     [production of development]           (false)
+// src:              [jade files]                          (paths.dev.jade.pathToFiles)
+// dest:             [folder with html files]              (paths.dev.folder)
+// relativeRefresh   [recompile all relative files]        (false)
+// jadeFolder        [folder with jade files]              (paths.dev.jade.pathToFolder)
+// options           [options for jade compiler]           ({pretty: true})
+//-------------------------------------------------------------------------------------------
 lazyRequireTask('dev:templates:assembly', './tasks/html/templates-assembly');
 // main development html task
 gulp.task('dev:templates', gulp.parallel('setWatch', 'dev:templates:assembly'));
+
+// tasks for production html
+lazyRequireTask('build:templates:assembly', './tasks/html/templates-assembly', {
+    isProduction: true,
+    dest: paths.build.folder,
+    options: {pretty: false}
+});
+// main production html task
+gulp.task('build:templates', gulp.parallel('setWatch', 'build:templates:assembly'));
 
 
 //
@@ -57,8 +73,19 @@ gulp.task('dev:templates', gulp.parallel('setWatch', 'dev:templates:assembly'));
 lazyRequireTask('dev:clean:styles', './tasks/clean', {
     dest: paths.dev.css.pathToFolder
 });
+// tasks for #styles-assembly
+// @configs ---------------------------------------------------------------------------------
+// isProduction:     [production of development]           (false)
+// src:              [sass files]                          (paths.dev.sass.pathToFiles)
+// dev:              [folder with css files]               (paths.dev.css.pathToFolder)
+// linter            [linter for sass/css files]           ([])
+// postProcessors    [post processors for css]             ([])
+//-------------------------------------------------------------------------------------------
 lazyRequireTask('dev:styles:assembly', './tasks/css/styles-assembly', {
-    processors: [
+    // linter: [
+    //     stylelint()
+    // ],
+    postProcessors: [
         autoprefixer({browsers: ['last 2 versions', 'ie 9']})
     ]
 });
@@ -69,16 +96,13 @@ gulp.task('dev:styles', gulp.series(
 ));
 
 // tasks for production css
-lazyRequireTask('build:clean:styles', './tasks/clean', {
-    dest: paths.build.css.pathToFolder
-});
 lazyRequireTask('build:styles:assembly', './tasks/css/styles-assembly', {
     processors: [autoprefixer({browsers: ['last 2 versions', 'ie 9']})],
-    isProduction: true
+    isProduction: true,
+    dest: paths.build.css.pathToFolder
 });
 // main css build task
 gulp.task('build:styles', gulp.series(
-    'build:clean:styles',
     gulp.parallel('build:styles:assembly')
 ));
 
@@ -88,16 +112,31 @@ gulp.task('build:styles', gulp.series(
 //------------------------
 
 // tasks for development js
+// tasks for #js-assembly
+// @configs ---------------------------------------------------------------------------------
+// isProduction:     [production of development]           (false)
+// src:              [sass files]                          (paths.dev.sass.pathToFiles)
+// dev:              [folder with css files]               (paths.dev.css.pathToFolder)
+// linter            [linter for sass/css files]           ([])
+// postProcessors    [post processors for css]             ([])
+//-------------------------------------------------------------------------------------------
 lazyRequireTask('dev:js:assembly', './tasks/js/js-assembly');
 lazyRequireTask('dev:js:hint', './tasks/js/js-hint');
 // main development js task
 gulp.task('dev:js', gulp.parallel('dev:js:assembly', 'dev:js:hint'));
+
+// tasks for development js
+lazyRequireTask('build:js:assembly', './tasks/js/js-assembly');
+lazyRequireTask('build:js:hint', './tasks/js/js-hint');
+// main development js task
+gulp.task('build:js', gulp.parallel('build:js:assembly', 'build:js:hint'));
 
 
 //
 // #images
 //------------------------
 
+// task for development images
 // tasks for #sprite
 // @configs ---------------------------------------------------------------------------------
 // src:              [folder with sprites folders]         (paths.dev.images.pathToFolder)
@@ -107,7 +146,7 @@ gulp.task('dev:js', gulp.parallel('dev:js:assembly', 'dev:js:hint'));
 // imgDest:          [dest folder for sprites images]      (paths.dev.images.pathToFolder)
 // stylesDest:       [dest folder ofr sprites style files] (paths.dev.sass.pathToFolder)
 //-------------------------------------------------------------------------------------------
-lazyRequireTask('img:sprite', './tasks/images/img-sprite');
+lazyRequireTask('dev:img:sprite', './tasks/images/img-sprite');
 
 // task for img-min
 // @configs --------------------------------------------
@@ -116,12 +155,14 @@ lazyRequireTask('img:sprite', './tasks/images/img-sprite');
 //------------------------------------------------------
 lazyRequireTask('dev:img:min', './tasks/images/img-min');
 
-
-// lazyRequireTask('beautify', './tasks/beautify', {
-//     src: paths.dev.sass.pathToFiles,
-//     dest: paths.dev.sass.pathToFiles
-// });
-
+// task for production images
+lazyRequireTask('build:img:sprite', './tasks/images/img-sprite', {
+    imgDest: paths.build.images.pathToFolder,
+    stylesDest: paths.build.sass.pathToFolder
+});
+lazyRequireTask('build:img:min', './tasks/images/img-min', {
+    dest: paths.build.images.pathToFolder
+});
 
 //////////////////////////////////////////////////
 // #GROUPED TASKS
@@ -130,7 +171,8 @@ lazyRequireTask('dev:img:min', './tasks/images/img-min');
 //
 // #dev tasks
 //------------------------
-gulp.task('dev', gulp.series('img:sprite', gulp.parallel('dev:styles', 'dev:img:min', 'dev:js', 'dev:templates')));
+gulp.task('dev', gulp.series('dev:img:sprite', gulp.parallel('dev:styles', 'dev:img:min', 'dev:js', 'dev:templates')));
+gulp.task('build', gulp.series('dev:img:sprite', gulp.parallel('dev:styles', 'dev:img:min', 'dev:js', 'dev:templates')));
 
 
 //
