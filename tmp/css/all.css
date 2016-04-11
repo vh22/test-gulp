@@ -1,0 +1,11 @@
+{
+"errors"
+:[],
+
+"warnings"
+:[ {
+"line": "2", "level": "2", "message": "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.", "type": "no-background-color", "uri": "file://localhost/TextArea"
+}
+
+]
+}

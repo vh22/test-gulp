@@ -110,6 +110,7 @@ lazyRequireTask('build:styles:assembly', './tasks/css/styles-assembly', {
     isProduction: true,
     dest: paths.build.css.pathToFolder
 });
+lazyRequireTask('build:styles:validation', './tasks/css/styles-validation');
 // main css build task
 gulp.task('build:styles', gulp.series(
     gulp.parallel('build:styles:assembly')
