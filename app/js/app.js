@@ -1,6 +1,6 @@
-// var $ = require('jquery');
-var addClass = require('./plugins/addClass');
-// $('*').css('color', 'red');
+const $ = require('jquery');
+const addClass = require('./plugins/addClass');
+$('*').css('color', 'tomato');
 console.log('main file1211');
 
 addClass({

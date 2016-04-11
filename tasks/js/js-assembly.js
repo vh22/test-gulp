@@ -13,6 +13,7 @@ var paths = require('../../sliceart_modules/paths.js');
 module.exports = function (options) {
 
     var isProduction = options.isProduction || false,
+        isBabel = options.isBabel || true,
         browserifyWatchifySettings = assign(options.browserifySettings || {}, watchify.args),
         bundleExtName = options.extname || '.bundle.js';
 
@@ -26,7 +27,7 @@ module.exports = function (options) {
 
             files.map(function (entry) {
                 var currentOpts = assign(browserifyWatchifySettings, {entries: [entry], plugin: [watchify]}),
-                    b = browserify(currentOpts);
+                    b = browserify(currentOpts).transform('babelify', {presets: ['es2015']});
 
                 function bundle(entry) {
                     return b.bundle()
