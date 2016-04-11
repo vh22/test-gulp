@@ -1,4 +1,4 @@
-# test-gulp-babel
+# test-gulp
 
 ## Project setup
 ### Installing Node.js
