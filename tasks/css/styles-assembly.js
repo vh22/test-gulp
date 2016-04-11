@@ -13,14 +13,18 @@ module.exports = function (options) {
             .pipe($.plumber({
                 errorHandler: $.notify.onError(function (err) {
                     return {
-                        title: 'Styles assembly',
+                        title: 'Styles assembly error',
                         message: err.message
                     };
                 })
             }))
             .pipe($.if(!isProduction, $.sourcemaps.init()))
             .pipe($.sassGlob())
-            // .pipe($.postcss(options.linter || [], options.syntax || {syntax: syntax_scss}))
+            .pipe($.stylelint({
+                reporters: [
+                    {formatter: 'string', console: true}
+                ]
+            }))
             .pipe($.sass())
             .pipe($.postcss(options.postProcessors || []))
             .pipe($.if(isProduction, $.csso()))
