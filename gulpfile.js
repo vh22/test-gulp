@@ -3,8 +3,6 @@
 var gulp = require('gulp');
 var paths = require('./sliceart_modules/paths.js');
 var autoprefixer = require('autoprefixer');
-var reporter    = require('postcss-reporter');
-var stylelint = require('stylelint');
 
 // service function
 function lazyRequireTask(taskName, path, options) {
@@ -39,6 +37,13 @@ gulp.task('setWatch', function(cb) {
 lazyRequireTask('build:clean', './tasks/clean', {
     dest: paths.build.folder
 });
+// build zip
+// tasks for #templates-assembly
+// @configs ---------------------------------------------------------------------------------
+// src:              [files for zip]                          (paths.build.folder + '**/*')
+// dest:             [folder for ziped files]                 (process.cwd())
+//-------------------------------------------------------------------------------------------
+lazyRequireTask('build:zip', './tasks/zip');
 
 
 //
@@ -82,8 +87,8 @@ lazyRequireTask('dev:clean:styles', './tasks/clean', {
 // isProduction:     [production of development]           (false)
 // src:              [sass files]                          (paths.dev.sass.pathToFiles)
 // dev:              [folder with css files]               (paths.dev.css.pathToFolder)
-// linter            [linter for sass/css files]           ([])
-// postProcessors    [post processors for css]             ([])
+// linter:           [linter for sass/css files]           ([])
+// postProcessors:   [post processors for css]             ([])
 //-------------------------------------------------------------------------------------------
 lazyRequireTask('dev:styles:assembly', './tasks/css/styles-assembly', {
     // linter: [
@@ -204,14 +209,35 @@ lazyRequireTask('build:fonts:copy', './tasks/copy', {
 //
 // #dev tasks
 //------------------------
-gulp.task('dev', gulp.series('dev:img:sprite', gulp.parallel('dev:img:min', 'dev:templates', 'dev:styles', 'dev:js:hint', 'dev:js')));
-gulp.task('build', gulp.series('build:clean', 'build:img:sprite', 'build:img:copy', gulp.parallel('build:fonts:copy', 'build:img:min', 'build:templates', 'build:styles', 'dev:js:hint', 'build:js')));
+gulp.task('dev', gulp.series(
+    'dev:img:sprite',
+    gulp.parallel(
+        'dev:templates',
+        'dev:styles',
+        'dev:js:hint',
+        'dev:js'
+    )
+));
 
 
 //
 // #build tasks
 //------------------------
-// gulp.task('build', gulp.parallel('templates:dev', 'styles:dev', 'js:assembly'));
+gulp.task('build', gulp.series(
+    'build:clean',
+    'build:img:sprite',
+    gulp.parallel(
+        'build:img:copy',
+        'build:fonts:copy',
+        'build:img:min',
+        'build:templates',
+        'build:styles',
+        'dev:js:hint',
+        'build:js'
+    ),
+    'build:zip'
+));
+
 
 //
 // #default task
