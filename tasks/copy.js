@@ -1,7 +1,7 @@
 'use strict';
 
 var $ = require('gulp-load-plugins')();
-var paths = require('../../sliceart_modules/paths.js');
+var paths = require('../sliceart_modules/paths.js');
 var gulp = require('gulp');
 
 module.exports = function (options) {

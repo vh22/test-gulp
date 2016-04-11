@@ -184,7 +184,18 @@ lazyRequireTask('build:img:min', './tasks/images/img-min', {
 // src  [input folder for copy]  (paths.dev.images.pathToFiles)
 // dest [output folder for copy] (paths.build.images.pathToFolder)
 //---------------------------------------------------------------
-lazyRequireTask('build:img:copy', './tasks/images/img-copy');
+lazyRequireTask('build:img:copy', './tasks/copy');
+
+
+//
+// #fonts
+//------------------------
+lazyRequireTask('build:fonts:copy', './tasks/copy', {
+    src: paths.dev.fonts.pathToFiles,
+    dest: paths.build.fonts.pathToFolder
+});
+
+
 
 //////////////////////////////////////////////////
 // #GROUPED TASKS
@@ -194,7 +205,7 @@ lazyRequireTask('build:img:copy', './tasks/images/img-copy');
 // #dev tasks
 //------------------------
 gulp.task('dev', gulp.series('dev:img:sprite', gulp.parallel('dev:img:min', 'dev:templates', 'dev:styles', 'dev:js:hint', 'dev:js')));
-gulp.task('build', gulp.series('build:clean', 'build:img:sprite', 'build:img:copy', gulp.parallel('build:img:min', 'build:templates', 'build:styles', 'dev:js:hint', 'build:js')));
+gulp.task('build', gulp.series('build:clean', 'build:img:sprite', 'build:img:copy', gulp.parallel('build:fonts:copy', 'build:img:min', 'build:templates', 'build:styles', 'dev:js:hint', 'build:js')));
 
 
 //
