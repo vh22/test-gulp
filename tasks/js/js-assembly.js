@@ -17,8 +17,9 @@ module.exports = function (options) {
         bundleExtName = options.extname || '.bundle.js';
 
     return function (done) {
-        var excludedBundle = '!' + paths.dev.js.pathToFolder + '*' + bundleExtName;
-        glob([options.src || paths.dev.js.pathToOurFiles, excludedBundle], function (err, files) {
+        var bundleFiles = paths.dev.js.pathToFolder + '*' + bundleExtName,
+            excludeBundleFiles = '!' + bundleFiles;
+        glob([options.src || paths.dev.js.pathToOurFiles, excludeBundleFiles], function (err, files) {
             if (err) {
                 done(err);
             }
@@ -37,12 +38,12 @@ module.exports = function (options) {
                         .pipe($.if(!isProduction, $.sourcemaps.init({loadMaps: true})))
                         .pipe($.if(!isProduction, $.sourcemaps.write()))
                         .pipe($.if(isProduction, $.uglify()))
-                        .pipe($.if(!isProduction,
-                            gulp.dest(options.dest || './'),
-                            gulp.dest(options.dest || './')));
+                        .pipe(gulp.dest(options.dest || './'))
+                        .pipe($.if(isProduction, gulp.src(bundleFiles)
+                            .pipe(gulp.dest(options.buildDest || paths.build.js.pathToFolder))
+                        ));
                 }
                 b.on('update', function () {
-                    console.log('rebundle');
                     return bundle(entry);
                 });
                 b.on('log', function () {

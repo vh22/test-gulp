@@ -3,7 +3,6 @@
 var $ = require('gulp-load-plugins')();
 var paths = require('../../sliceart_modules/paths.js');
 var gulp = require('gulp');
-// var syntax_scss = require('postcss-scss');
 
 module.exports = function (options) {
 
