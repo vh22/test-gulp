@@ -1,5 +1,6 @@
+/*jslint browser: true*/
 'use strict';
-module.exports = function(window) {
+module.exports = (function(window) {
     var $ = require('jquery'),
         html = $('html'),
         navigator = window.navigator,
@@ -40,4 +41,4 @@ module.exports = function(window) {
             console.log('You need to specify a selector for add class utility method');
         }
     };
-}(window);
+}(window));

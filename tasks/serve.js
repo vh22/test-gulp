@@ -17,6 +17,7 @@ module.exports = function(options) {
         gulp.watch(paths.dev.sass.pathToFiles, gulp.series('dev:styles', browserSync.reload));
         gulp.watch(paths.dev.jade.pathToFiles, gulp.series('dev:templates', browserSync.reload));
         gulp.watch(paths.dev.js.pathToBrowserifyFiles, browserSync.reload);
+        gulp.watch(paths.dev.js.pathToFiles, gulp.series('dev:js:hint'));
         gulp.watch(paths.dev.images.pathToFiles, gulp.series('dev:img:min', browserSync.reload));
         gulp.watch(paths.dev.images.pathToSpriteFiles, gulp.series('dev:img:sprite', browserSync.reload));
         gulp.watch(paths.dev.fonts.pathToFiles, gulp.series(browserSync.reload));

@@ -6,6 +6,7 @@ var through2 = require('through2').obj;
 var fs = require('fs');
 var paths = require('../../sliceart_modules/paths.js');
 var combine = require('stream-combiner2').obj;
+var mkpath = require('mkpath');
 
 module.exports = function (options) {
 
@@ -13,12 +14,24 @@ module.exports = function (options) {
 
         var jshintResults = {};
 
-        var cacheFilePath = options.cacheFilePath || process.cwd() + '/tmp/hintCache.json';
+        var cacheFilePath = options.cacheFilePath || process.cwd() + '/tmp/';
+
+        var cacheFileName = options.cacheFileName || 'hintCache.json';
+
+        var cacheFullName = cacheFilePath + cacheFileName;
 
         var ignoreBundle = options.ignoreBundle || '*.bundle.js';
 
+        mkpath(cacheFilePath, function (err) {
+            if (err) {
+                throw err
+            } else {
+                fs.writeFile(cacheFileName);
+            }
+        });
+
         try {
-            jshintResults = JSON.parse(fs.readFileSync(cacheFilePath));
+            jshintResults = JSON.parse(fs.readFileSync(cacheFullName));
         } catch (e) {
         }
 
@@ -48,7 +61,7 @@ module.exports = function (options) {
                 )
             ))
             .on('end', function () {
-                fs.writeFileSync(cacheFilePath, JSON.stringify((jshintResults)));
+                fs.writeFileSync(cacheFullName, JSON.stringify((jshintResults)));
             })
             .pipe($.jshint.reporter('jshint-stylish'));
 

@@ -22,6 +22,7 @@
 .idea/uiDesigner.xml
 
 # Gradle:
+/tmp
 .idea/gradle.xml
 .idea/libraries
 

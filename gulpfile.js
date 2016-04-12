@@ -135,7 +135,8 @@ lazyRequireTask('dev:js:assembly', './tasks/js/js-assembly');
 // @configs -----------------------------------------------------------------------------------------------------------
 // isProduction:               [production of development]                      (false)
 // src:                        [js files]                                       (paths.dev.js.pathToFiles)
-// cacheFilePath:              [file for hinted files]                          (process.cwd() + '/tmp/hintCache.json')
+// cacheFilePath:              [path for cache file]                            (process.cwd() + '/tmp/')
+// cacheFileName:              [name of cache file]                             (hintCache.json')
 // ignoreBundle:               [ignore files for speed improve]                 ('*.bundle.js')
 //---------------------------------------------------------------------------------------------------------------------
 lazyRequireTask('dev:js:hint', './tasks/js/js-hint');
