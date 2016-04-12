@@ -70,8 +70,9 @@ lazyRequireTask('build:templates:assembly', './tasks/html/templates-assembly', {
     dest: paths.build.folder,
     options: {pretty: false}
 });
+lazyRequireTask('build:templates:validation', './tasks/html/templates-validation');
 // main production html task
-gulp.task('build:templates', gulp.parallel('setWatch', 'build:templates:assembly'));
+gulp.task('build:templates', gulp.series('build:templates:assembly'));
 
 
 //
@@ -87,13 +88,9 @@ lazyRequireTask('dev:clean:styles', './tasks/clean', {
 // isProduction:     [production of development]           (false)
 // src:              [sass files]                          (paths.dev.sass.pathToFiles)
 // dev:              [folder with css files]               (paths.dev.css.pathToFolder)
-// linter:           [linter for sass/css files]           ([])
 // postProcessors:   [post processors for css]             ([])
 //-------------------------------------------------------------------------------------------
 lazyRequireTask('dev:styles:assembly', './tasks/css/styles-assembly', {
-    // linter: [
-    //     stylelint()
-    // ],
     postProcessors: [
         autoprefixer({browsers: ['last 2 versions', 'ie 9']})
     ]
