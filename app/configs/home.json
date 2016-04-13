@@ -1,0 +1,18 @@
+{
+  "title": "Home",
+  "baseurl": "..",
+  "button": {
+    "type": "button",
+    "content": "Default button"
+  },
+  "buttonFooter": {
+    "type": "submit",
+    "content": "Default footer button"
+  },
+  "textLorem": {
+    "text": "awesome text home"
+  },
+  "textBig": {
+    "text": "awesome text homeawesome text homeawesome text homeawesome text homeawesome text homeawesome text homeawesome text homeawesome text homeawesome text homeawesome text home"
+  }
+}

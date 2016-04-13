@@ -15,12 +15,10 @@ module.exports = function(options) {
             startPath: options.src + options.startPage
         });
         gulp.watch(paths.dev.sass.pathToFiles, gulp.series('dev:styles', browserSync.reload));
-        gulp.watch(paths.dev.jade.pathToFiles, gulp.series('dev:templates', browserSync.reload));
         gulp.watch([
-            paths.dev.jade.pathToFolder + '**/*.json',
-            '!' + paths.dev.jade.pathToFolder + 'index.json'
-            ],
-            gulp.series('dev:templates:config', 'dev:templates', browserSync.reload));
+            paths.dev.jade.pathToFiles,
+            paths.dev.configs.pathToFiles
+        ], gulp.series('dev:templates', browserSync.reload));
         gulp.watch(paths.dev.js.pathToBrowserifyFiles, browserSync.reload);
         gulp.watch(paths.dev.js.pathToFiles, gulp.series('dev:js:hint'));
         gulp.watch(paths.dev.images.pathToFiles, gulp.series('dev:img:min', browserSync.reload));

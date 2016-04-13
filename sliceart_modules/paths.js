@@ -37,6 +37,10 @@ paths.dev = {
   jade: {
     folder: 'jade/',
     files: '**/*.jade'
+  },
+  configs: {
+    folder: 'configs/',
+    files: '**/*.json'
   }
 };
 
@@ -80,6 +84,10 @@ paths.dev.html.pathToFiles = paths.dev.html.pathToFolder + paths.dev.html.files;
 paths.dev.jade.pathToFolder = paths.dev.folder + paths.dev.jade.folder;
 paths.dev.jade.pathToFiles = paths.dev.jade.pathToFolder + paths.dev.jade.files;
 
+// configs
+paths.dev.configs.pathToFolder = paths.dev.folder + paths.dev.configs.folder;
+paths.dev.configs.pathToFiles = paths.dev.configs.pathToFolder + paths.dev.configs.files;
+
 paths.markup = {
   folder: 'markup/',
   css: {
@@ -103,6 +111,10 @@ paths.markup = {
   fonts: {
     folder: 'fonts/',
     files: '{,**/}*.{woff,eot,ttf,svg}'
+  },
+  configs: {
+    folder: 'configs/',
+    files: '**/*.json'
   }
 };
 
@@ -157,6 +169,10 @@ paths.build = {
   html: {
     folder: '',
     files: '{,**/}*.html'
+  },
+  configs: {
+    folder: 'configs/',
+    files: '**/*.json'
   }
 };
 

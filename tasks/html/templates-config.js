@@ -7,7 +7,7 @@ var del = require('del');
 var path = require('path');
 var fs = require('fs');
 var through2 = require('through2').obj;
-var date = new Date();
+var currentDate = new Date();
 
 module.exports = function (options) {
 
@@ -22,14 +22,12 @@ module.exports = function (options) {
                     };
                 })
             }))
-            .pipe(
-                through2(function (file, enc, callback) {
-                    gulp.src(path.parse(file.path).dir + paths.dev.jade.files)
-                        .pipe($.insert.append('//' + date))
-                        .pipe(gulp.dest(paths.dev.jade.pathToFolder));
-                    callback(null, file);
-                })
-            )
+            // .pipe(
+            //     through2(function (file, enc, callback) {
+            //         console.log(fs.stat(path.parse(file.path).dir + paths.dev.jade.files));
+            //         callback(null, file);
+            //     })
+            // )
             .pipe($.mergeJson('index.json'))
             .pipe(gulp.dest(options.dest || paths.dev.jade.pathToFolder));
     };

@@ -65,12 +65,12 @@ lazyRequireTask('dev:templates:assembly', './tasks/html/templates-assembly', {
 });
 // TODO make the task config list
 lazyRequireTask('dev:templates:config:assembly', './tasks/html/templates-config');
-lazyRequireTask('dev:templates:config:clean', './tasks/clean', {
-    dest: paths.dev.jade.pathToFolder + 'index.json'
-});
-gulp.task('dev:templates:config', gulp.series('dev:templates:config:clean', 'dev:templates:config:assembly'));
+// lazyRequireTask('dev:templates:config:clean', './tasks/clean', {
+//     dest: paths.dev.jade.pathToFolder + 'index.json'
+// });
+// gulp.task('dev:templates:config', gulp.series('dev:templates:config:clean', 'dev:templates:config:assembly'));
 // main development html task
-gulp.task('dev:templates', gulp.series(gulp.parallel('dev:templates:config', 'setWatch'), 'dev:templates:assembly'));
+gulp.task('dev:templates', gulp.series('dev:templates:assembly'));
 
 // tasks for production html
 lazyRequireTask('build:templates:assembly', './tasks/html/templates-assembly', {
