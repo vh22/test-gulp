@@ -2,6 +2,8 @@
 
 var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
+var glob = require('glob-all');
+var path = require('path');
 var paths = require('../../sliceart_modules/paths.js');
 
 module.exports = function(options) {
@@ -24,6 +26,9 @@ module.exports = function(options) {
             .pipe($.if(options.relativeRefresh || false, $.jadeInheritance({basedir: options.jadeFolder || paths.dev.jade.pathToFolder})))
             .pipe($.filter(function (file) {
                 return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+            }))
+            .pipe($.data(function() {
+                return require('../../' + (options.jsonSrc || paths.dev.jade.pathToFolder + 'index.json'));
             }))
             .pipe($.jade(options.options || {
                     pretty: true

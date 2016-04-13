@@ -1,0 +1,10 @@
+mixin address(type,item, ...mod)
+  if item
+    address.address&attributes(mod ? {"class": mod} : '')
+      h2= type.item.title
+      div= type.item.content
+  else
+    each item in type.items
+      address.address&attributes(mod ? {"class": mod} : '')
+        h2= item.title
+        div= item.content
