@@ -28,7 +28,6 @@ module.exports = function(options) {
                 return !/\/_/.test(file.path) && !/^_/.test(file.relative);
             }))
             .pipe($.data(function(file) {
-                // console.log(require('../../' + paths.dev.configs.pathToFolder + path.basename(file.path, '.jade') + '.json'));
                 return require('../../' + paths.dev.configs.pathToFolder + path.basename(file.path, '.jade') + '.json');
             }))
             .pipe($.jade(options.options || {

@@ -2,8 +2,8 @@
   "title": "Home",
   "baseurl": "..",
   "button": {
-    "type": "button",
-    "content": "Default button"
+    "btnType": "button",
+    "content": "super button"
   },
   "buttonFooter": {
     "type": "submit",

@@ -1,6 +1,2 @@
 mixin button(type, ...mod)
-    button.btn&attributes(
-    mod ? {'class': mod} : '',
-    type.type ? {'type': type.type} : 'submit',
-    )
-        #{type.content ? type.content : 'Default button'}
+    button.btn&attributes(mod ? {'class': mod} : '')= type.content ? type.content : 'Default button'

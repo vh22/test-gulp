@@ -1,0 +1,7 @@
+include ../../_atoms/link/link
+mixin navMain(type, ...mod)
+  nav.nav-main&attributes(mod ? {'class': mod} : '')
+    ul
+      each item in type.link
+        li
+          +link(item)

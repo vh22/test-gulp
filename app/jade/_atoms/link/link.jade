@@ -1,0 +1,2 @@
+mixin link(type, ...mod)
+    a(href= type.href)&attributes(mod ? {'class': mod} : '')= type.content

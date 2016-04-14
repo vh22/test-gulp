@@ -1,18 +1,20 @@
 {
   "title": "Home",
   "baseurl": "..",
-  "button": {
-    "type": "button",
-    "content": "Default button"
-  },
-  "buttonFooter": {
-    "type": "submit",
-    "content": "Default footer button"
-  },
-  "textLorem": {
-    "text": "lorem ipsum"
-  },
-  "textBig": {
-    "text": "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+  "navMain": {
+    "link": [
+      {
+        "href": "link1",
+        "content": "link content 1"
+      },
+      {
+        "href": "link2",
+        "content": "link content 2"
+      },
+      {
+        "href": "link3",
+        "content": "link content 3"
+      }
+    ]
   }
 }
